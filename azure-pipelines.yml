@@ -7,16 +7,15 @@ pool:
 steps:
 - task: UseRubyVersion@0
   inputs:
-    versionSpec: '>= 2.7'
+    versionSpec: '>= 2.5'
 
 - script: |
     gem install jekyll bundler
     bundle install --retry=3 --jobs=4
-    bundle lock --add-platform x86-mingw32 x86-mswin32 x64-mingw32 java
+    bundle update --bundler
   displayName: 'bundle install'
  
 - script: |
-    bundle install
     jekyll build
   displayName: 'jekyll'
  
