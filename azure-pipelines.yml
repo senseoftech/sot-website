@@ -3,7 +3,7 @@ trigger:
 
 pool:
   name: docker_agents
-  
+
 steps:
 - task: UseRubyVersion@0
   inputs:
@@ -12,6 +12,7 @@ steps:
 - script: |
     gem install jekyll bundler
     bundle install --retry=3 --jobs=4
+    bundle lock --add-platform x86-mingw32 x86-mswin32 x64-mingw32 java
   displayName: 'bundle install'
  
 - script: |
