@@ -2,8 +2,8 @@ trigger:
 - main
 
 pool:
-  vmImage: 'ubuntu-latest'
-
+  name: docker_agents
+  
 steps:
 - task: UseRubyVersion@0
   inputs:
