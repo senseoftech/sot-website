@@ -11,6 +11,7 @@ steps:
 
 - script: |
     gem install jekyll bundler
+    bundle lock --add-platform mingw, mswin, x64_mingw, jruby
     bundle install --retry=3 --jobs=4
     bundle update --bundler
   displayName: 'bundle install'
