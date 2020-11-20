@@ -34,9 +34,9 @@ plugins:
   - jekyll-feed
   - jekyll-paginate
 
-sass:
-  load_paths:
-    - bower_components/
+# sass:
+#   load_paths:
+#     - bower_components/
 
 incremental: true
 
