@@ -24,6 +24,9 @@ Key facts:
 - [À propos / About]({{ '/a-propos/' | absolute_url }}): company story and founder
 - [Contact]({{ '/contact/' | absolute_url }}): get in touch — the first conversation is free
 
+## Selected clients
+{% for client in site.data.references.clients %}- {{ client.name }}
+{% endfor %}
 ## Optional
 - [Sitemap]({{ '/sitemap.xml' | absolute_url }})
 - [Machine profile for agents]({{ '/agents.txt' | absolute_url }})

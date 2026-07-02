@@ -8,11 +8,28 @@ intro:
   fr: "Nous accompagnons des entreprises, des PME et des indépendants dans la création, la modernisation et l'exploitation de leurs applications. Voici quelques organisations qui nous ont fait confiance."
   en: "We support companies, SMEs and independents in building, modernizing and getting the most out of their applications. Here are some of the organizations that have trusted us."
 
-# Exemple de format attendu :
-#   - name: "Nom du client"
-#     logo: /assets/images/clients/nom-client.png
-#     url: "https://exemple.com"        # optionnel
-clients: []
+# Chaque entrée affiche le NOM par défaut. Ajoute `logo:` (chemin vers une image
+# déposée dans /assets/images/clients/) pour afficher le logo à la place du nom.
+# `url:` est optionnel (rend le nom/logo cliquable).
+clients:
+  - name: "Microsoft"
+  - name: "Audi"
+  - name: "AXA"
+  - name: "Ores"
+  - name: "Le Forem"
+  - name: "Heidelberg Materials"
+  - name: "Ingenico ePayments (Worldline)"
+  - name: "Belgian Institute for Sustainable IT"
+  - name: "Nemotherm"
+  - name: "Corellia"
+  - name: "Carrosserie Edouard et Tony"
+  - name: "CrossFit Talion"
+  - name: "Tyremasters Zaventem"
+  - name: "LFFS Hainaut"
+  - name: "Abbey Throwdown"
+  - name: "NTTB"
+  - name: "Gin de Binche"
+  - name: "Salade2Fruits"
 
 # Témoignages (optionnel) — s'affichent seulement s'ils sont renseignés.
 # Exemple :

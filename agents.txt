@@ -30,6 +30,9 @@ conferences. Based in Belgium, serving BE/FR/LU/EU, remotely or on-site.
 {% for x in site.data.expertises -%}
 - {{ x.title.en }} ({{ x.title.fr }}): {{ '/expertises/' | append: x.slug | append: '/' | absolute_url }}
 {% endfor %}
+[clients]
+{% for client in site.data.references.clients %}- {{ client.name }}
+{% endfor %}
 [key_pages]
 home = {{ site.url }}/
 expertise = {{ '/expertises/' | absolute_url }}

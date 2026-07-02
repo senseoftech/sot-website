@@ -25,15 +25,7 @@ banner:
     </div>
 
     {%- if r.clients and r.clients.size > 0 -%}
-    <div class="logo-grid reveal">
-      {%- for client in r.clients -%}
-      <div class="logo-cell">
-        {%- if client.url -%}<a href="{{ client.url }}" target="_blank" rel="noopener" title="{{ client.name }}">{%- endif -%}
-        <img src="{{ client.logo | relative_url }}" alt="{{ client.name }}" loading="lazy">
-        {%- if client.url -%}</a>{%- endif -%}
-      </div>
-      {%- endfor -%}
-    </div>
+    {% include client-wall.html %}
     {%- else -%}
     <div class="placeholder-note reveal">
       <p><strong><span class="i18n-fr">Références détaillées disponibles sur demande.</span><span class="i18n-en">Detailed references available on request.</span></strong></p>

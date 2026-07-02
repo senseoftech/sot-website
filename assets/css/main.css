@@ -736,6 +736,36 @@ a.card:hover .card__more svg { transform: translateX(4px); }
   background: var(--surface);
 }
 .logo-grid .logo-cell img { max-height: 56px; width: auto; opacity: 0.85; }
+
+/* Client wall: shows logos when available, otherwise company names */
+.client-wall {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+}
+.client-cell {
+  aspect-ratio: 5 / 2;
+  display: grid; place-items: center;
+  text-align: center;
+  padding: 18px 20px;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--border);
+  background: var(--surface);
+  transition: transform 0.25s var(--ease), border-color 0.25s var(--ease), background 0.25s var(--ease);
+}
+.client-cell:hover { transform: translateY(-3px); border-color: var(--gold); background: var(--surface-2); }
+.client-cell a { display: grid; place-items: center; width: 100%; height: 100%; color: inherit; }
+.client-cell img { max-height: 50px; width: auto; opacity: 0.85; filter: grayscale(1) brightness(1.6); transition: opacity 0.2s var(--ease), filter 0.2s var(--ease); }
+.client-cell:hover img { opacity: 1; filter: none; }
+.client-name {
+  font-family: var(--font-head);
+  font-weight: 600;
+  font-size: 1.01rem;
+  letter-spacing: -0.01em;
+  color: var(--text);
+  transition: color 0.2s var(--ease);
+}
+.client-cell:hover .client-name { color: var(--gold); }
 .placeholder-note {
   border: 1px dashed var(--border-strong);
   border-radius: var(--radius);
@@ -845,12 +875,14 @@ a.card:hover .card__more svg { transform: translateX(4px); }
   .teaser__media { min-height: 180px; }
   .topic-grid { grid-template-columns: repeat(2, 1fr); }
   .logo-grid { grid-template-columns: repeat(3, 1fr); }
+  .client-wall { grid-template-columns: repeat(3, 1fr); }
   .footer__grid { grid-template-columns: 1fr 1fr; }
   .footer__brand { grid-column: 1 / -1; }
 }
 @media (max-width: 640px) {
   .topic-grid { grid-template-columns: 1fr; }
   .logo-grid { grid-template-columns: repeat(2, 1fr); }
+  .client-wall { grid-template-columns: repeat(2, 1fr); }
   .testimonials-grid { grid-template-columns: 1fr; }
   .footer__grid { grid-template-columns: 1fr; }
   .process li { padding-left: 54px; }

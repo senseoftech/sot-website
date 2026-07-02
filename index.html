@@ -160,20 +160,22 @@ description: >
   </div>
 </section>
 
-<!-- ============================ REFERENCES TEASER ============================ -->
-<section class="section">
+<!-- ============================ REFERENCES / TRUSTED BY ============================ -->
+<section class="section" id="references">
   <div class="container">
-    <div class="teaser reveal">
-      <div class="teaser__media">{% include icon.html name="spark" %}</div>
-      <div>
-        <span class="eyebrow"><span class="i18n-fr">Références</span><span class="i18n-en">References</span></span>
-        <h2><span class="i18n-fr">Ils nous ont fait confiance.</span><span class="i18n-en">They put their trust in us.</span></h2>
-        <p><span class="i18n-fr">Des entreprises, PME et indépendants nous confient la création, la modernisation et l'exploitation de leurs applications.</span><span class="i18n-en">Companies, SMEs and independents trust us to build, modernize and get the most out of their applications.</span></p>
-        <a class="btn btn-ghost" href="{{ '/references/' | relative_url }}">
-          <span class="i18n-fr">Voir nos références</span><span class="i18n-en">See our references</span>
-          {% include icon.html name="arrow-right" %}
-        </a>
-      </div>
+    <div class="section-head center reveal">
+      <span class="eyebrow"><span class="i18n-fr">Références</span><span class="i18n-en">References</span></span>
+      <h2><span class="i18n-fr">Ils nous ont fait confiance.</span><span class="i18n-en">They put their trust in us.</span></h2>
+      <p><span class="i18n-fr">Des grands groupes aux PME et indépendants, ils nous confient la création, la modernisation et l'exploitation de leurs applications.</span><span class="i18n-en">From large groups to SMEs and independents, they trust us to build, modernize and get the most out of their applications.</span></p>
+    </div>
+
+    {% include client-wall.html %}
+
+    <div style="text-align:center;margin-top:44px" class="reveal">
+      <a class="btn btn-ghost" href="{{ '/references/' | relative_url }}">
+        <span class="i18n-fr">Voir toutes nos références</span><span class="i18n-en">See all our references</span>
+        {% include icon.html name="arrow-right" %}
+      </a>
     </div>
   </div>
 </section>

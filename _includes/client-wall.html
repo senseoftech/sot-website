@@ -1,0 +1,16 @@
+{%- comment -%} Grid of client references. Shows the logo when a `logo:` is set in
+   _data/references.yml, otherwise the company name as text. {%- endcomment -%}
+{%- assign r = site.data.references -%}
+<div class="client-wall reveal">
+  {%- for client in r.clients -%}
+  <div class="client-cell">
+    {%- if client.url -%}<a href="{{ client.url }}" target="_blank" rel="noopener" title="{{ client.name }}">{%- endif -%}
+    {%- if client.logo -%}
+      <img src="{{ client.logo | relative_url }}" alt="{{ client.name }}" loading="lazy">
+    {%- else -%}
+      <span class="client-name">{{ client.name }}</span>
+    {%- endif -%}
+    {%- if client.url -%}</a>{%- endif -%}
+  </div>
+  {%- endfor -%}
+</div>
