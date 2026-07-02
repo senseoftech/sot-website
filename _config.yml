@@ -1,72 +1,22 @@
-# Welcome to Jekyll!
-#
-# This config file is meant for settings that affect your whole blog, values
-# which you are expected to set up once and rarely edit after that. If you find
-# yourself editing this file very often, consider using Jekyll's data files
-# feature for the data you need to update frequently.
-#
-# For technical reasons, this file is *NOT* reloaded automatically when you use
-# 'bundle exec jekyll serve'. If you change this file, please restart the server process.
-
 # Site settings
-# These are used to personalize your new site. If you look in the HTML files,
-# you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
-# You can create any custom variable you would like, and they will be accessible
-# in the templates via {{ site.myvariable }}.
 title: Sense of Tech
-
-# This is the place to set up the contact form recipient
-# email: info@senseof.tech
-
-description: > # this means to ignore newlines until "baseurl:"
-  It's time to make the leap to your innovation
+description: >
+  AI-assisted engineering, custom application development and application
+  modernization. Ingénierie assistée par IA, création et modernisation
+  d'applications.
 baseurl: ""
 url: "https://www.senseof.tech"
 twitter_username: senseof_tech
-github_username:  senseoftech
+github_username: senseoftech
+# email: info@senseof.tech
 
 # Build settings
 markdown: kramdown
-# theme: minima
 plugins:
   - jekyll-feed
-  - jekyll-paginate
-
-# sass:
-#   load_paths:
-#     - bower_components/
 
 incremental: true
 
-exclude: ['gulpfile.js', 'Gemfile', 'Gemfile.lock']
-
-collections:
-  works:
-    output: true
-    permalink: /portfolio/:name/
-
-defaults:
-  - scope:
-      path: ""
-      type: works
-    values:
-      layout: work
-
-paginate: 4
-paginate_path: "/blog/page/:num"
-
-# This is the place to set up the commenting system
-# disqus:
-#   shortname: your-disqus-shortname
-
-# Exclude from processing.
-# The following items will not be processed, by default. Create a custom list
-# to override the default setting.
-# exclude:
-#   - Gemfile
-#   - Gemfile.lock
-#   - node_modules
-#   - vendor/bundle/
-#   - vendor/cache/
-#   - vendor/gems/
-#   - vendor/ruby/
+exclude:
+  - Gemfile
+  - Gemfile.lock
