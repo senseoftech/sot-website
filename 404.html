@@ -1,24 +1,21 @@
 ---
 layout: default
+title: "404 — Page not found"
 ---
 
-<style type="text/css" media="screen">
-  .container {
-    margin: 10px auto;
-    max-width: 600px;
-    text-align: center;
-  }
-  h1 {
-    margin: 30px 0;
-    font-size: 4em;
-    line-height: 1;
-    letter-spacing: -1px;
-  }
-</style>
-
-<div class="container">
-  <h1>404</h1>
-
-  <p><strong>Page not found :(</strong></p>
-  <p>The requested page could not be found.</p>
-</div>
+<section class="section" style="min-height:70vh;display:grid;place-items:center;text-align:center">
+  <div class="container" style="max-width:620px">
+    <div class="eyebrow" style="justify-content:center">Error 404</div>
+    <h1 style="font-size:clamp(3.5rem,12vw,7rem);color:var(--gold);line-height:1">404</h1>
+    <h2 style="margin-top:8px">
+      <span class="i18n-fr">Cette page est introuvable.</span><span class="i18n-en">This page could not be found.</span>
+    </h2>
+    <p style="color:var(--text-muted);margin:18px auto 32px;max-width:440px">
+      <span class="i18n-fr">Le lien est peut-être cassé ou la page a été déplacée. Revenons à l'accueil.</span><span class="i18n-en">The link may be broken or the page may have moved. Let's head back home.</span>
+    </p>
+    <a class="btn btn-primary" href="{{ '/' | relative_url }}">
+      <span class="i18n-fr">Retour à l'accueil</span><span class="i18n-en">Back to home</span>
+      {% include icon.html name="arrow-right" %}
+    </a>
+  </div>
+</section>

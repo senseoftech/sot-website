@@ -5,3 +5,7 @@ _site/
 .code/
 vendor/
 .bundle/
+
+# Local preview scaffolding (not part of the Jekyll build)
+_preview.html
+.claude/launch.json

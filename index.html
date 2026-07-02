@@ -1,375 +1,228 @@
 ---
 layout: default
 onepage: true
-services:
-  - title: Development
-    icon: fa fa-laptop-code
-    desc: You have an idea, a need or a problem and you would like to convert it into a digital solution so that you can go even further and faster. We can help you convert this spark into the application that will allow you to be the best on the market.
-    bg: /assets/images/@stock/service-item-5-bg.jpg
-  - title: Consulting
-    icon: fa fa-briefcase
-    desc: Sense of Tech can support you in your developments in terms of IT architecture, IT development, etc.
-    bg: /assets/images/@stock/service-item-1-bg.jpg
-  - title: Coaching
-    icon: fa fa-tv
-    desc: The best way to make its developers evolve is to develop their skills. In addition to having more competent developers, you have happy developers.
-    bg: /assets/images/@stock/service-item-2-bg.jpg
-  - title: Training
-    icon: fa fa-chalkboard-teacher
-    desc: We can give you training to increase your skills, do not hesitate to contact us to establish together an efficient training plan that will meet your needs.
-    bg: /assets/images/@stock/service-item-3-bg.jpg
-  - title: Automation
-    icon: fa fa-ethernet
-    desc: We are able to carry out your domestic installations in order to cable and install an internet exchange in one area and allow you to avoid having cables everywhere.
-    bg: /assets/images/@stock/service-item-4-bg.jpg 
-  - title: Solution
-    icon: fa fa-bullseye
-    desc: We have other areas of expertise, do not hesitate to contact us for a list.
-    bg: /assets/images/@stock/service-item-6-bg.jpg
-works:
-  - path: _works/diff-foods.md
-  - path: _works/sketch-book.md 
-  - path: _works/tv-video.md
-    style: wide
-  - path: _works/umbrella-beauty.md
-  - path: _works/amber.md
-  - path: _works/explore.md  
-  - path: _works/uro-mag.md 
-    style: wide
-  - path: _works/flowers.md
-members:
-  - avatar: /assets/images/@stock/member-7.png
-    name: Adrien Clerbois
-    position: Founder
-    socials:
-      - link: https://twitter.com/aclerbois
-        icon: twitter
-      - link: https://www.linkedin.com/in/aclerbois/
-        icon: LinkedIn
-    desc:
-      "I created Sense of Tech to give me the means to help those around me. I am Microsoft MVP and this title allows me to travel and meet a lot of people with infinite knowledge."
-title: Sense of Tech - Leap to your Innovation
-team_slides:
-  - /assets/images/@stock/slide-full-8.jpg
-  - /assets/images/@stock/slide-full-1.jpg
-  - /assets/images/@stock/slide-full-10.jpg
-
-testimonials:
-  - quote: "Reprehenderit eos et non et ut eum reprehenderit quis sequi quia vel repellendus id. Velit quit blanditiis dolor quam error eos dolores sequi eaque rerum est. Velit quit blanditiis dolor quam error eos dolores sequi eaque rerum est."
-    author: 
-      name: "David White"
-      avatar: '/assets/images/@stock/author-avatar-1.png'
-      position: 'Designer at Huglab'
-  - quote: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat consectetuer sit amet magna adipiscing."
-    author: 
-      name: "David White"
-      avatar: '/assets/images/@stock/author-avatar-2.png'
-      position: 'Designer at Huglab'
-  - quote: "Reprehenderit eos et non et ut eum reprehenderit quis sequi quia vel repellendus id. Velit quit blanditiis dolor quam error eos dolores sequi eaque rerum est."
-    author: 
-      name: "David White"
-      avatar: '/assets/images/@stock/author-avatar-3.png'
-      position: 'Designer at Huglab'
-
-clients:
-  - /assets/images/@stock/client-8.png
-  - /assets/images/@stock/client-1.png
-  - /assets/images/@stock/client-2.png
-  - /assets/images/@stock/client-3.png
-  - /assets/images/@stock/client-4.png
-  - /assets/images/@stock/client-5.png
-  - /assets/images/@stock/client-9.png  
-  - /assets/images/@stock/client-7.png    
-  
+title: Sense of Tech — Leap to your innovation
+description: >
+  Sense of Tech accompagne les entreprises dans l'ingénierie assistée par IA,
+  la création et la modernisation d'applications. AI-assisted engineering,
+  custom development and application modernization.
 ---
-<!-- - /assets/images/@stock/client-6.png   -->
-<div class='full no-padding parallax home-video-wrapper'>
-  
-  <div class='fullscreen' style="background-image: url(/assets/images/@stock/wall1.jpg); background-clip: revert; background-position: center;background-size: cover;">
-     
-    <!-- <video autoplay='autoplay' id='fullscreen-video' loop='loop'>
-      <source src='{{ "/assets/images/@stock/wall1.jpg" | relative_url }}' type='video/mp4'>
-    </video> -->
-    <div class='overlay'></div>
-    <div class='layer'>
-      <p class="small-title">Make the right choice </p>
-      <h1 class='thin' id="to-be-update">
-         <span class="fir">Too fast</span><br/>
-         <span class="sec">Too wild</span><br/>
-         <span class="thir">Too different</span>
+
+{%- assign c = site.data.content -%}
+
+<!-- ============================ HERO ============================ -->
+<section class="hero" id="hero">
+  <div class="hero__bg"></div>
+  <div class="hero__grid"></div>
+  <div class="container">
+    <div class="hero__inner reveal">
+      <span class="hero__eyebrow">
+        <span class="dot"></span>
+        <span class="i18n-fr">{{ c.hero.eyebrow.fr }}</span><span class="i18n-en">{{ c.hero.eyebrow.en }}</span>
+      </span>
+
+      <h1>
+        <span class="i18n-fr">{{ c.hero.title_lead.fr }} <span class="accent">{{ c.hero.title_accent.fr }}</span> {{ c.hero.title_tail.fr }}</span>
+        <span class="i18n-en">{{ c.hero.title_lead.en }} <span class="accent">{{ c.hero.title_accent.en }}</span> {{ c.hero.title_tail.en }}</span>
       </h1>
-      <h2 class='thin'>
-       It's time to your company and you to make the leap to your innovation.
-       {% assign nav_obj = site.data.nav | where:'section_id','works' | first %}
-       <a href='{{ "index.html" | append:nav_obj.path | relative_url }}'>View our works</a>
+
+      <p class="hero__sub">
+        <span class="i18n-fr">{{ c.hero.subtitle.fr }}</span><span class="i18n-en">{{ c.hero.subtitle.en }}</span>
+      </p>
+
+      <div class="hero__actions">
+        <a class="btn btn-primary" href="#contact">
+          <span class="i18n-fr">{{ c.hero.cta_primary.fr }}</span><span class="i18n-en">{{ c.hero.cta_primary.en }}</span>
+          {% include icon.html name="arrow-right" %}
+        </a>
+        <a class="btn btn-ghost" href="#expertise">
+          <span class="i18n-fr">{{ c.hero.cta_secondary.fr }}</span><span class="i18n-en">{{ c.hero.cta_secondary.en }}</span>
+        </a>
+      </div>
+
+      <ul class="hero__trust">
+        {%- for t in c.trust -%}
+        <li>{% include icon.html name="spark" %}<span class="i18n-fr">{{ t.fr }}</span><span class="i18n-en">{{ t.en }}</span></li>
+        {%- endfor -%}
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ ABOUT ============================ -->
+<section class="section" id="about">
+  <div class="container about__grid">
+    <div class="about__text reveal">
+      <span class="eyebrow"><span class="i18n-fr">{{ c.about.eyebrow.fr }}</span><span class="i18n-en">{{ c.about.eyebrow.en }}</span></span>
+      <h2 class="section-head__title" style="font-size:clamp(1.8rem,3.6vw,2.7rem)">
+        <span class="i18n-fr">{{ c.about.title.fr }}</span><span class="i18n-en">{{ c.about.title.en }}</span>
       </h2>
-    </div>
-  </div>
-</div>
-
-
-<a id='about'></a>
-<div class='full'>
-  <div class='row'>
-    <div class='large-8 columns large-centered'>
-      <div class="section-title">
-        <p class="small-title">Your business first.</p>
-        <h2>
-          Creating solutions  <br/> 
-          is what we do best.
-        </h2>
-        <p class="big-size">We are creating solutions for any kind of project, think about how level up your business and we achieve the rest.</p>
-        <div class="four spacing"></div>
-        <img src="{{ "/assets/images/logo-black.png" | relative_url }}" alt="">
+      <div class="about__body">
+        {%- for p in c.about.body -%}
+        <p class="i18n-fr">{{ p.fr }}</p>
+        <p class="i18n-en">{{ p.en }}</p>
+        {%- endfor -%}
       </div>
+      <ul class="about__points">
+        {%- for pt in c.about.points -%}
+        <li>{% include icon.html name="check" %}<span><span class="i18n-fr">{{ pt.fr }}</span><span class="i18n-en">{{ pt.en }}</span></span></li>
+        {%- endfor -%}
+      </ul>
     </div>
-    <div class="four spacing"></div>
-  </div>
-</div>
-<div class="full no-overflow no-padding parallax" style="background-image: url({{ "/assets/images/@stock/about-1.jpg" | relative_url }})">
-  <div class="right-half">
-    <div class="two spacing"></div>
-    <div class="section-header alt white">
-      <h2>Solution oriented</h2>
-    </div>
-    <p class="light">We created Sense of Tech to find digital solutions for companies, smes and individuals who want to find ways to accelerate their ambitions.</p>
-    <p class="light">Sense of Tech is also an easy contact between a company full of ambition and the desire to create a better world. We invest our time in communities but also in works that reflect on tomorrow such as ISIT-BE.</p>
-    <div class="two spacing"></div>
-    <a href="#team" class="button small">Meet the team</a>
-    <div class="three spacing"></div>
-  </div>
-</div>
 
-
-<a id='services'></a>
-<div class='full'>
-  <div class='row'>
-    <div class='large-8 columns large-centered'>
-      <div class="section-title">
-        <p class="small-title">main services</p>
-        <h2>We transform business.</h2>
-      </div>
-    </div>
-  </div>
-</div>
-<div class='full no-overflow no-padding'>
-  <div class='main-services'>
-    {% for item in page.services %}
-      <div class='medium-6 large-4 columns'>
-        {% include service.html service=item %}
-      </div>
-    {% endfor %}
-  </div>
-</div>
-
-<!--
-<a id='works'></a>
-<div class='full'>
-  <div class='row'>
-    <div class='large-8 columns large-centered'>
-      {% include section-title.html small_title="take a look" title="What we recently do." %}
-    </div>
-  </div>
-</div>
-<div class='full no-padding' id="demo-1-works">
-  <div class='mod modMasonryGallery'>
-    <ul class='gallery'>
-
-      {% for item in page.works %}
-
-        {% assign work = site.works | where:"path",item.path | first %}
-
-        {% if item.style == 'wide' %}
-          {% assign class = 'wide' %}
-          {% assign width = 1000 %}
-          {% assign height = 350 %}
-        {% else %}
-          {% assign class = '' %}
-          {% assign width = 500 %}
-          {% assign height = 350 %}
-        {% endif %}
-
-        <li class="{{class}}">
-          <a href='{{ work.url | relative_url }}'>
-            <img width="{{width}}" height="{{height}}" alt="" src="{{ work.thumbnail | relative_url }}" />
-            <div class='overlay'>
-              <div class='thumb-info'>
-                <h3>{{ work.title | downcase | capitalize }}</h3>
-                <p>{{ work.categories | join:" & " | escape }}</p>
-              </div>
-            </div>
-          </a>
+    <aside class="about__card reveal" data-delay="1">
+      <img class="about__logo" src="{{ '/assets/images/logo-3.png' | relative_url }}" alt="{{ c.brand.name }}">
+      <ul class="about__highlights">
+        {%- for t in c.trust -%}
+        <li>
+          <span class="hl-icon">{% include icon.html name="spark" %}</span>
+          <span><span class="i18n-fr">{{ t.fr }}</span><span class="i18n-en">{{ t.en }}</span></span>
         </li>
-
-      {% endfor %}
-
-    </ul>
-  </div>
-</div>
-<div class='full dark no-padding '>
-  <div class="four spacing"></div>
-  <div class='row'>
-    <div class='large-8 columns'>
-      <h3 class="white">Customized to meet your needs.</h3>
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur inventore minimar.
-      </p>
-    </div>
-    <div class='large-4 columns'>
-      <p>
-        <a class='button small boxed' href='#'>Download Now</a>
-      </p>
-    </div>
-  </div>
-  <div class='two spacing'></div>
-</div>
--->
-
-<a id='team'></a>
-<div class='full dark-grey'>
-  <div class='row'>
-    <div class='large-8 columns large-centered'>
-      {% include section-title.html small_title="The team" title="Hello! This is Sense of Tech." %}
-    </div>
-  </div>
-</div>
-<div class="full dark-grey no-padding">
-  <div class="members">
-    {% for member in page.members %}
-      <div class=" columns">
-        <div class='member-avatar'>
-          <img class="avatar" alt="" src="{{ member.avatar | relative_url }}" />
-        </div>
+        {%- endfor -%}
+      </ul>
+      <div style="margin-top:28px">
+        <a class="btn btn-ghost" href="#team">
+          <span class="i18n-fr">Rencontrer l'équipe</span><span class="i18n-en">Meet the team</span>
+          {% include icon.html name="arrow-right" %}
+        </a>
       </div>
-    {% endfor %}
+    </aside>
   </div>
-</div>
-<div class="full no-padding team-bg">
-  <div class="div member-decs">
-    {% for member in page.members %}
-      <div class="large-3 columns" style="margin-left: 38%;">
-        <div class='member-dec'>
-          <div class='intro'>
-            <h3>{{ member.name | escape }}</h3>
-            <h4>{{ member.position | escape }}</h4>
-            <p>{{ member.desc | escape }}</p>
-            <ul class='socials'>
-              {% for social in member.socials %}
-                <li>
-                  <a href='{{ social.link }}'>
-                    <i class='fa fa-{{ social.icon }}'></i>
-                  </a>
-                </li>
-              {% endfor %}
-            </ul>
+</section>
+
+<!-- ============================ EXPERTISE ============================ -->
+<section class="section" id="expertise">
+  <div class="container">
+    <div class="section-head center reveal">
+      <span class="eyebrow"><span class="i18n-fr">{{ c.expertise.eyebrow.fr }}</span><span class="i18n-en">{{ c.expertise.eyebrow.en }}</span></span>
+      <h2><span class="i18n-fr">{{ c.expertise.title.fr }}</span><span class="i18n-en">{{ c.expertise.title.en }}</span></h2>
+      <p><span class="i18n-fr">{{ c.expertise.intro.fr }}</span><span class="i18n-en">{{ c.expertise.intro.en }}</span></p>
+    </div>
+
+    <div class="cards">
+      {%- for s in c.expertise.services -%}
+      <article class="card reveal" data-delay="{{ forloop.index0 | modulo: 3 }}">
+        <div class="card__icon">{% include icon.html name=s.icon %}</div>
+        <h3><span class="i18n-fr">{{ s.title.fr }}</span><span class="i18n-en">{{ s.title.en }}</span></h3>
+        <p><span class="i18n-fr">{{ s.desc.fr }}</span><span class="i18n-en">{{ s.desc.en }}</span></p>
+      </article>
+      {%- endfor -%}
+    </div>
+  </div>
+</section>
+
+<!-- ============================ APPROACH ============================ -->
+<section class="section approach" id="approach">
+  <div class="container">
+    <div class="section-head center reveal">
+      <span class="eyebrow"><span class="i18n-fr">{{ c.approach.eyebrow.fr }}</span><span class="i18n-en">{{ c.approach.eyebrow.en }}</span></span>
+      <h2><span class="i18n-fr">{{ c.approach.title.fr }}</span><span class="i18n-en">{{ c.approach.title.en }}</span></h2>
+    </div>
+
+    <div class="steps">
+      {%- for step in c.approach.steps -%}
+      <div class="step reveal" data-delay="{{ forloop.index0 | modulo: 4 }}">
+        <div class="step__num">{{ step.num }}</div>
+        <div class="step__icon">{% include icon.html name=step.icon %}</div>
+        <h3><span class="i18n-fr">{{ step.title.fr }}</span><span class="i18n-en">{{ step.title.en }}</span></h3>
+        <p><span class="i18n-fr">{{ step.desc.fr }}</span><span class="i18n-en">{{ step.desc.en }}</span></p>
+      </div>
+      {%- endfor -%}
+    </div>
+  </div>
+</section>
+
+<!-- ============================ TEAM ============================ -->
+<section class="section team" id="team">
+  <div class="container">
+    <div class="section-head center reveal">
+      <span class="eyebrow"><span class="i18n-fr">{{ c.team.eyebrow.fr }}</span><span class="i18n-en">{{ c.team.eyebrow.en }}</span></span>
+      <h2><span class="i18n-fr">{{ c.team.title.fr }}</span><span class="i18n-en">{{ c.team.title.en }}</span></h2>
+    </div>
+
+    <div class="members">
+      {%- for m in c.team.members -%}
+      <article class="member reveal">
+        <img class="member__avatar" src="{{ m.avatar | relative_url }}" alt="{{ m.name }}">
+        <div>
+          <h3>{{ m.name }}</h3>
+          <div class="member__role"><span class="i18n-fr">{{ m.role.fr }}</span><span class="i18n-en">{{ m.role.en }}</span></div>
+          <p><span class="i18n-fr">{{ m.bio.fr }}</span><span class="i18n-en">{{ m.bio.en }}</span></p>
+          <div class="member__socials">
+            {%- for s in m.socials -%}
+            <a href="{{ s.link }}" target="_blank" rel="noopener" aria-label="{{ s.icon }}">{% include icon.html name=s.icon %}</a>
+            {%- endfor -%}
           </div>
         </div>
-      </div>
-    {% endfor %}
+      </article>
+      {%- endfor -%}
+    </div>
   </div>
-  <div class="four spacing"></div>
-</div>
-<div class="full no-padding">
-  <div class='mod modBoxedSlider' data-timeout='1500'>
-    <div class='slides'>
-      {% for image in page.team_slides %}
-        <div class='slide'>
-          <img width="1200" height="800" alt="" src="{{ image | relative_url }}" />
+</section>
+
+<!-- ============================ CTA BAND ============================ -->
+<section class="cta-band">
+  <div class="container">
+    <div class="cta-band__inner reveal">
+      <h2><span class="i18n-fr">{{ c.cta.title.fr }}</span><span class="i18n-en">{{ c.cta.title.en }}</span></h2>
+      <p><span class="i18n-fr">{{ c.cta.subtitle.fr }}</span><span class="i18n-en">{{ c.cta.subtitle.en }}</span></p>
+      <a class="btn btn-primary" href="#contact">
+        <span class="i18n-fr">{{ c.cta.button.fr }}</span><span class="i18n-en">{{ c.cta.button.en }}</span>
+        {% include icon.html name="arrow-right" %}
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ CONTACT ============================ -->
+<section class="section section--tight" id="contact">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow"><span class="i18n-fr">{{ c.contact.eyebrow.fr }}</span><span class="i18n-en">{{ c.contact.eyebrow.en }}</span></span>
+      <h2><span class="i18n-fr">{{ c.contact.title.fr }}</span><span class="i18n-en">{{ c.contact.title.en }}</span></h2>
+      <p><span class="i18n-fr">{{ c.contact.intro.fr }}</span><span class="i18n-en">{{ c.contact.intro.en }}</span></p>
+    </div>
+
+    <div class="contact__grid">
+      <form class="form reveal" id="contact-form" data-mailto="{{ c.contact.details.email }}">
+        <div class="form__row">
+          <input type="text" name="name" required
+                 data-fr="{{ c.contact.form.name.fr }}" data-en="{{ c.contact.form.name.en }}"
+                 placeholder="{{ c.contact.form.name.fr }}">
+          <input type="email" name="email" required
+                 data-fr="{{ c.contact.form.email.fr }}" data-en="{{ c.contact.form.email.en }}"
+                 placeholder="{{ c.contact.form.email.fr }}">
         </div>
-      {% endfor %}
-    </div>
-  </div>
-</div>
+        <input type="text" name="subject"
+               data-fr="{{ c.contact.form.subject.fr }}" data-en="{{ c.contact.form.subject.en }}"
+               placeholder="{{ c.contact.form.subject.fr }}">
+        <textarea name="message" required
+                  data-fr="{{ c.contact.form.message.fr }}" data-en="{{ c.contact.form.message.en }}"
+                  placeholder="{{ c.contact.form.message.fr }}"></textarea>
+        <button type="submit" class="btn btn-primary">
+          {% include icon.html name="mail" %}
+          <span class="i18n-fr">{{ c.contact.form.submit.fr }}</span><span class="i18n-en">{{ c.contact.form.submit.en }}</span>
+        </button>
+      </form>
 
-<!--
-<a id='blog'></a>
-<div class='full grey'>
-  <div class='row'>
-    <div class='large-8 columns large-centered'>
-      {% include section-title.html small_title="latest posts" title="Wrap ideas." %}
-    </div>
-  </div>
-</div>
-<div class="full grey no-padding no-overflow">
-  {% for post in site.posts limit:3 %}
-    <div class='large-4 columns'>
-      <div class='mod modBlogPost simple'>
-        <div class='content'>
-          <p class='date'>{{ post.date | date: "%B %d, %Y" }}</p>
-          <h3><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
-          <div class='spacing'></div>
-          <p>
-            <a class='button boxed yellow tiny' href='{{ post.url | relative_url }}'>Read more</a>
-          </p>
+      <aside class="contact__card reveal" data-delay="1">
+        <div class="contact__item">
+          <div class="label"><span class="i18n-fr">{{ c.contact.details.office.fr }}</span><span class="i18n-en">{{ c.contact.details.office.en }}</span></div>
+          <p>{{ c.contact.details.address }}</p>
         </div>
-      </div>
-      <div class="four spacing"></div>
-    </div>
-  {% endfor %}
-</div>
--->
-
-<!--
-
-<div class='full no-overflow no-padding parallax' style="background-image: url({{ "/assets/images/@stock/customers-bg.jpg" | relative_url }})">
-  <div class="left-half">
-    <div class="two spacing"></div>
-    <div class="row">
-      <div class="section-header alt white">
-        <h2>What our clients say</h2>
-      </div>
-      <div class='mod modTestimonials simple'>
-        <div class='row'>
-          <div class='small-12 columns'>
-            <div class='items'>
-              {% for t in page.testimonials %}
-                <div class='item'>
-                  <p class='quote'>{{ t.quote }}</p>
-                  <div class="two spacing"></div>
-                  <div class='author'>
-                    <p class='author-avatar'>
-                      <img width="80" height="80" alt="" src="{{ t.author.avatar | relative_url }}" />
-                    </p>
-                    <p class='author-name'>
-                      -
-                      <strong>{{ t.author.name }}</strong>
-                      {%- if t.author.position %}, {{ t.author.position }}{% endif %}
-                    </p>
-                  </div>
-                </div>
-              {% endfor %}
-            </div>
-          </div>
+        <div class="contact__item">
+          <div class="label"><span class="i18n-fr">{{ c.contact.details.phone_label.fr }}</span><span class="i18n-en">{{ c.contact.details.phone_label.en }}</span></div>
+          <p><a href="tel:+32489361501">{{ c.contact.details.phone }}</a></p>
         </div>
-      </div>
-    </div>
-  </div>
-</div>
--->
-<div class='full'>
-  <div class='row'>
-    <div class='large-8 columns large-centered'>
-      {% include section-title.html small_title="we are happy" title="Featured clients" %}
-    </div>
-  </div>
-</div>
-<div class="full no-padding">
-  <div class="clients">
-    <div class='row'>
-      {% for client in page.clients %}
-        <div class='large-3 medium-6 small-6 columns'>
-          <div class="client">
-            <a href="javascript:void(0)"><img alt="" src="{{ client | relative_url }}" /></a>
-          </div>
+        <div class="contact__item">
+          <div class="label">{{ c.contact.details.email_label }}</div>
+          <p><a href="mailto:{{ c.contact.details.email }}">{{ c.contact.details.email }}</a></p>
         </div>
-      {% endfor %}
+        <div class="contact__item">
+          <div class="label">{{ c.contact.details.vat_label }}</div>
+          <p>{{ c.contact.details.vat }}</p>
+        </div>
+      </aside>
     </div>
   </div>
-  <div class="four spacing"></div>
-</div>
-
-<div class="four spacing"></div>
-<a id='contact'></a>
-{% include contact-form.html %}
-
-{% include social-networks.html %}
+</section>

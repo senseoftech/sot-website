@@ -1,0 +1,271 @@
+# ---------------------------------------------------------------------------
+# Bilingual content for the Sense of Tech one-page site.
+# Every string has a `fr` and `en` variant. The template renders both and a
+# small language switcher (assets/js/site.js) toggles which one is visible.
+# ---------------------------------------------------------------------------
+
+brand:
+  name: Sense of Tech
+  tagline:
+    fr: "L'ingénierie logicielle, augmentée par l'IA"
+    en: "Software engineering, augmented by AI"
+
+nav:
+  - id: about
+    fr: "À propos"
+    en: "About"
+  - id: expertise
+    fr: "Expertises"
+    en: "Expertise"
+  - id: approach
+    fr: "Approche"
+    en: "Approach"
+  - id: team
+    fr: "Équipe"
+    en: "Team"
+  - id: contact
+    fr: "Contact"
+    en: "Contact"
+
+hero:
+  eyebrow:
+    fr: "Ingénierie assistée par IA · Développement · Modernisation"
+    en: "AI-assisted engineering · Development · Modernization"
+  title_lead:
+    fr: "Concevons ensemble les applications qui"
+    en: "Let's build the applications that"
+  title_accent:
+    fr: "propulsent"
+    en: "propel"
+  title_tail:
+    fr: "votre entreprise."
+    en: "your business forward."
+  subtitle:
+    fr: "Sense of Tech accompagne entreprises, PME et porteurs de projets dans la création, la modernisation et l'exploitation de leurs applications — avec l'intelligence artificielle comme véritable levier de performance."
+    en: "Sense of Tech helps companies, SMEs and founders create, modernize and get the most out of their applications — with artificial intelligence as a genuine performance lever."
+  cta_primary:
+    fr: "Discutons de votre projet"
+    en: "Let's talk about your project"
+  cta_secondary:
+    fr: "Découvrir nos expertises"
+    en: "Explore our expertise"
+
+trust:
+  - fr: "Microsoft MVP"
+    en: "Microsoft MVP"
+  - fr: "Basés en Belgique"
+    en: "Based in Belgium"
+  - fr: "IA · Cloud · DevOps"
+    en: "AI · Cloud · DevOps"
+  - fr: "+10 ans d'expérience"
+    en: "10+ years of experience"
+
+about:
+  eyebrow:
+    fr: "À propos"
+    en: "About"
+  title:
+    fr: "La technologie a du sens quand elle sert vos ambitions."
+    en: "Technology matters when it serves your ambitions."
+  body:
+    - fr: "Nous avons créé Sense of Tech pour aider les entreprises, les PME et les indépendants à trouver les solutions numériques qui accélèrent leurs ambitions — sans complexité inutile."
+      en: "We created Sense of Tech to help companies, SMEs and independents find the digital solutions that accelerate their ambitions — without needless complexity."
+    - fr: "Aujourd'hui, l'intelligence artificielle change la façon de concevoir, moderniser et exploiter les logiciels. Nous en faisons un atout concret pour vos équipes, pas un simple effet de mode."
+      en: "Today, artificial intelligence is reshaping how software is designed, modernized and operated. We turn it into a concrete asset for your teams — not just another buzzword."
+  points:
+    - fr: "Un interlocuteur unique, expert et engagé, du cadrage à la mise en production."
+      en: "A single, expert and committed partner — from framing to production."
+    - fr: "Des solutions sur-mesure, pensées pour durer et évoluer avec vous."
+      en: "Tailor-made solutions, designed to last and grow with you."
+    - fr: "Le transfert de savoir au cœur de chaque mission : vous restez autonomes."
+      en: "Knowledge transfer at the heart of every engagement: you stay autonomous."
+
+expertise:
+  eyebrow:
+    fr: "Nos expertises"
+    en: "Our expertise"
+  title:
+    fr: "De l'idée à la valeur, propulsés par l'IA."
+    en: "From idea to value, powered by AI."
+  intro:
+    fr: "Six façons concrètes de faire passer un cap à votre entreprise."
+    en: "Six concrete ways to take your business to the next level."
+  services:
+    - icon: cpu
+      title:
+        fr: "Ingénierie assistée par IA"
+        en: "AI-assisted engineering"
+      desc:
+        fr: "Nous intégrons l'IA au cœur de votre cycle de développement — agents, copilotes de code, automatisation des tâches — pour livrer plus vite, avec une meilleure qualité et des équipes réellement augmentées."
+        en: "We embed AI at the core of your development lifecycle — coding agents, copilots, task automation — to ship faster, with higher quality and truly augmented teams."
+    - icon: layers
+      title:
+        fr: "Modernisation d'applications"
+        en: "Application modernization"
+      desc:
+        fr: "Vos applications historiques deviennent un frein ? Nous les modernisons : refonte d'architecture, migration vers le cloud et découpage progressif du legacy, sans jamais interrompre votre activité."
+        en: "Is your legacy holding you back? We modernize it: architecture overhaul, cloud migration and progressive decomposition of legacy systems — without ever disrupting your business."
+    - icon: code
+      title:
+        fr: "Création d'applications"
+        en: "Custom application development"
+      desc:
+        fr: "D'une idée à un produit en production. Nous concevons et développons des applications web, mobiles et métier sur-mesure : robustes, évolutives et taillées pour vos utilisateurs."
+        en: "From an idea to a product in production. We design and build tailor-made web, mobile and business applications: robust, scalable and shaped around your users."
+    - icon: rocket
+      title:
+        fr: "Révéler votre plein potentiel"
+        en: "Unlock your full potential"
+      desc:
+        fr: "Nous accompagnons les entreprises pour exploiter tout le potentiel de leur technologie et de l'IA : cadrage stratégique, feuille de route, montée en compétences et gains mesurables."
+        en: "We help companies harness the full potential of their technology and AI: strategic framing, roadmap, upskilling and measurable outcomes."
+    - icon: compass
+      title:
+        fr: "Conseil & architecture"
+        en: "Consulting & architecture"
+      desc:
+        fr: "Un regard expert sur vos choix techniques : architecture logicielle, cloud, DevOps et bonnes pratiques pour bâtir sur des fondations solides et sereines."
+        en: "Expert guidance on your technical choices: software architecture, cloud, DevOps and best practices to build on solid, worry-free foundations."
+    - icon: graduation
+      title:
+        fr: "Coaching & formation"
+        en: "Coaching & training"
+      desc:
+        fr: "Nous faisons grandir vos équipes : coaching technique, formations sur-mesure et transfert de savoir pour des développeurs plus compétents, plus autonomes et plus épanouis."
+        en: "We grow your teams: technical coaching, tailored training and knowledge transfer for more skilled, more autonomous and more fulfilled developers."
+
+approach:
+  eyebrow:
+    fr: "Notre approche"
+    en: "Our approach"
+  title:
+    fr: "Une méthode simple, des résultats concrets."
+    en: "A simple method, concrete results."
+  steps:
+    - num: "01"
+      icon: ear
+      title:
+        fr: "Écouter"
+        en: "Listen"
+      desc:
+        fr: "Comprendre votre contexte, vos contraintes et vos ambitions avant d'écrire la moindre ligne de code."
+        en: "Understand your context, constraints and ambitions before writing a single line of code."
+    - num: "02"
+      icon: pen
+      title:
+        fr: "Concevoir"
+        en: "Design"
+      desc:
+        fr: "Définir la bonne architecture et une feuille de route pragmatique, priorisée par la valeur."
+        en: "Define the right architecture and a pragmatic, value-driven roadmap."
+    - num: "03"
+      icon: build
+      title:
+        fr: "Construire"
+        en: "Build"
+      desc:
+        fr: "Développer et livrer par itérations courtes, avec l'IA comme accélérateur de qualité."
+        en: "Develop and deliver in short iterations, with AI as a quality accelerator."
+    - num: "04"
+      icon: share
+      title:
+        fr: "Transmettre"
+        en: "Empower"
+      desc:
+        fr: "Vous rendre autonomes : documentation, montée en compétences et mesure des résultats."
+        en: "Make you autonomous: documentation, upskilling and measuring the results."
+
+team:
+  eyebrow:
+    fr: "L'équipe"
+    en: "The team"
+  title:
+    fr: "Bonjour, ici Sense of Tech."
+    en: "Hello, this is Sense of Tech."
+  members:
+    - name: Adrien Clerbois
+      avatar: /assets/images/adrien-clerbois.jpg
+      role:
+        fr: "Fondateur · Microsoft MVP"
+        en: "Founder · Microsoft MVP"
+      bio:
+        fr: "J'ai créé Sense of Tech pour aider mon entourage et les entreprises à tirer le meilleur de la technologie. Microsoft MVP, je passe beaucoup de temps à explorer, apprendre et partager au sein des communautés tech, aux quatre coins du monde."
+        en: "I created Sense of Tech to help the people and companies around me get the very best out of technology. As a Microsoft MVP, I spend a lot of time exploring, learning and sharing within tech communities all over the world."
+      socials:
+        - icon: twitter
+          link: https://twitter.com/aclerbois
+        - icon: linkedin
+          link: https://www.linkedin.com/in/aclerbois/
+
+cta:
+  title:
+    fr: "Prêt à passer le cap de votre innovation ?"
+    en: "Ready to make the leap to your innovation?"
+  subtitle:
+    fr: "Parlons de vos objectifs. Le premier échange est toujours offert."
+    en: "Let's talk about your goals. The first conversation is always on us."
+  button:
+    fr: "Prendre contact"
+    en: "Get in touch"
+
+contact:
+  eyebrow:
+    fr: "Contact"
+    en: "Contact"
+  title:
+    fr: "Travaillons ensemble"
+    en: "Let's work together"
+  intro:
+    fr: "Une idée, un besoin, une question ? Écrivez-nous, nous revenons vers vous rapidement."
+    en: "An idea, a need, a question? Drop us a line — we'll get back to you quickly."
+  form:
+    name:
+      fr: "Nom"
+      en: "Name"
+    email:
+      fr: "E-mail"
+      en: "Email"
+    subject:
+      fr: "Sujet"
+      en: "Subject"
+    message:
+      fr: "Votre message"
+      en: "Your message"
+    submit:
+      fr: "Envoyer le message"
+      en: "Send message"
+  details:
+    office:
+      fr: "Siège"
+      en: "Head office"
+    address: "Rue de la Basse Egypte 81<br>7133 Buvrinnes<br>Belgique"
+    phone_label:
+      fr: "Téléphone"
+      en: "Phone"
+    phone: "+32 (0) 489 36 15 01"
+    vat_label: "TVA / VAT"
+    vat: "BE0745.467.665"
+    email_label: "E-mail"
+    email: "info@senseof.tech"
+
+footer:
+  tagline:
+    fr: "Passez le cap de votre innovation."
+    en: "Make the leap to your innovation."
+  rights:
+    fr: "Tous droits réservés."
+    en: "All rights reserved."
+
+socials:
+  - icon: linkedin
+    label: LinkedIn
+    link: https://www.linkedin.com/company/senseoftech/
+  - icon: github
+    label: GitHub
+    link: https://github.com/senseoftech
+  - icon: twitter
+    label: Twitter
+    link: https://twitter.com/senseof_tech
+  - icon: facebook
+    label: Facebook
+    link: https://www.facebook.com/TheSenseOfTech
