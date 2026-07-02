@@ -2,14 +2,18 @@
 <header class="site-header">
   <div class="container">
     <nav class="nav" aria-label="Main">
-      <a class="nav__logo" href="{{ '/' | relative_url }}#top" aria-label="{{ c.brand.name }}">
+      <a class="nav__logo" href="{{ '/' | relative_url }}" aria-label="{{ c.brand.name }}">
         <img src="{{ '/assets/images/logo-3.png' | relative_url }}" alt="{{ c.brand.name }}">
       </a>
 
       <ul class="nav__links">
         {%- for item in c.nav -%}
+          {%- assign item_url = item.url | relative_url -%}
+          {%- assign is_active = false -%}
+          {%- if item.url == '/' and page.url == '/' -%}{%- assign is_active = true -%}
+          {%- elsif item.url != '/' and page.url contains item.url -%}{%- assign is_active = true -%}{%- endif -%}
         <li>
-          <a href="#{{ item.id }}">
+          <a href="{{ item_url }}"{% if is_active %} class="active" aria-current="page"{% endif %}>
             <span class="i18n-fr">{{ item.fr }}</span><span class="i18n-en">{{ item.en }}</span>
           </a>
         </li>
@@ -22,7 +26,7 @@
           <button type="button" data-set-lang="en" aria-pressed="false">EN</button>
         </div>
 
-        <a class="btn btn-primary nav__cta" href="#contact">
+        <a class="btn btn-primary nav__cta" href="{{ '/contact/' | relative_url }}">
           <span class="i18n-fr">{{ c.hero.cta_primary.fr }}</span><span class="i18n-en">{{ c.hero.cta_primary.en }}</span>
         </a>
 

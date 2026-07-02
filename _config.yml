@@ -1,22 +1,41 @@
 # Site settings
 title: Sense of Tech
 description: >
-  AI-assisted engineering, custom application development and application
-  modernization. Ingénierie assistée par IA, création et modernisation
-  d'applications.
+  AI-assisted engineering, custom application development, application
+  modernization, training and conferences. Ingénierie assistée par IA,
+  création et modernisation d'applications, formations et conférences.
 baseurl: ""
 url: "https://www.senseof.tech"
+lang: fr
+locale: fr_BE
 twitter_username: senseof_tech
 github_username: senseoftech
 # email: info@senseof.tech
+
+# Company facts reused across templates and structured data
+company:
+  legal_name: Sense of Tech
+  founder: Adrien Clerbois
+  email: info@senseof.tech
+  phone: "+32489361501"
+  phone_display: "+32 (0) 489 36 15 01"
+  vat: BE0745.467.665
+  street: Rue de la Basse Egypte 81
+  postal_code: "7133"
+  city: Buvrinnes
+  country: Belgique
+  country_code: BE
 
 # Build settings
 markdown: kramdown
 plugins:
   - jekyll-feed
+  - jekyll-sitemap
 
 incremental: true
 
 exclude:
   - Gemfile
   - Gemfile.lock
+  - README.md
+  - node_modules

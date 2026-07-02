@@ -1,0 +1,76 @@
+{%- comment -%} Renders a full expertise detail page from _data/expertises.yml, matched on page.slug {%- endcomment -%}
+{%- assign x = site.data.expertises | where: "slug", page.slug | first -%}
+
+<section class="page-banner">
+  <div class="page-banner__bg"></div>
+  <div class="container">
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+      <a href="{{ '/' | relative_url }}"><span class="i18n-fr">Accueil</span><span class="i18n-en">Home</span></a>
+      <span class="sep">/</span>
+      <a href="{{ '/expertises/' | relative_url }}"><span class="i18n-fr">Expertises</span><span class="i18n-en">Expertise</span></a>
+      <span class="sep">/</span>
+      <span class="current"><span class="i18n-fr">{{ x.title.fr }}</span><span class="i18n-en">{{ x.title.en }}</span></span>
+    </nav>
+    <span class="eyebrow"><span class="i18n-fr">Expertise</span><span class="i18n-en">Expertise</span></span>
+    <h1><span class="i18n-fr">{{ x.title.fr }}</span><span class="i18n-en">{{ x.title.en }}</span></h1>
+    <p class="page-banner__lead"><span class="i18n-fr">{{ x.tagline.fr }}</span><span class="i18n-en">{{ x.tagline.en }}</span></p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container split">
+    <div class="prose reveal">
+      {%- for p in x.intro -%}
+      <p class="i18n-fr">{{ p.fr }}</p>
+      <p class="i18n-en">{{ p.en }}</p>
+      {%- endfor -%}
+
+      <h2><span class="i18n-fr">Ce que vous y gagnez</span><span class="i18n-en">What you gain</span></h2>
+      <ul class="ticklist">
+        {%- for b in x.benefits -%}
+        <li>
+          {% include icon.html name="check" %}
+          <span>
+            <span class="t"><span class="i18n-fr">{{ b.t.fr }}</span><span class="i18n-en">{{ b.t.en }}</span></span>
+            <span class="d"><span class="i18n-fr">{{ b.d.fr }}</span><span class="i18n-en">{{ b.d.en }}</span></span>
+          </span>
+        </li>
+        {%- endfor -%}
+      </ul>
+
+      <h2><span class="i18n-fr">Comment nous procédons</span><span class="i18n-en">How we work</span></h2>
+      <ol class="process">
+        {%- for s in x.process -%}
+        <li>
+          <h3><span class="i18n-fr">{{ s.t.fr }}</span><span class="i18n-en">{{ s.t.en }}</span></h3>
+          <p><span class="i18n-fr">{{ s.d.fr }}</span><span class="i18n-en">{{ s.d.en }}</span></p>
+        </li>
+        {%- endfor -%}
+      </ol>
+
+      <div style="margin-top:36px">
+        <a class="btn btn-primary" href="{{ '/contact/' | relative_url }}">
+          <span class="i18n-fr">Discuter de votre projet</span><span class="i18n-en">Discuss your project</span>
+          {% include icon.html name="arrow-right" %}
+        </a>
+      </div>
+    </div>
+
+    <aside class="aside-card reveal" data-delay="1">
+      <div class="card__icon" style="margin-bottom:20px">{% include icon.html name=x.icon %}</div>
+      <h3><span class="i18n-fr">Ce que vous obtenez</span><span class="i18n-en">What you get</span></h3>
+      <ul>
+        {%- for d in x.deliverables -%}
+        <li>{% include icon.html name="check" %}<span><span class="i18n-fr">{{ d.fr }}</span><span class="i18n-en">{{ d.en }}</span></span></li>
+        {%- endfor -%}
+      </ul>
+      <div style="margin-top:24px">
+        <a class="btn btn-ghost" href="{{ '/expertises/' | relative_url }}">
+          <span class="i18n-fr">Toutes les expertises</span><span class="i18n-en">All expertise</span>
+        </a>
+      </div>
+    </aside>
+  </div>
+</section>
+
+{% include cta-band.html %}

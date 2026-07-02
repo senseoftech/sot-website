@@ -11,19 +11,22 @@ brand:
     en: "Software engineering, augmented by AI"
 
 nav:
-  - id: about
-    fr: "À propos"
-    en: "About"
-  - id: expertise
+  - url: /
+    fr: "Accueil"
+    en: "Home"
+  - url: /expertises/
     fr: "Expertises"
     en: "Expertise"
-  - id: approach
-    fr: "Approche"
-    en: "Approach"
-  - id: team
-    fr: "Équipe"
-    en: "Team"
-  - id: contact
+  - url: /formations-conferences/
+    fr: "Formations"
+    en: "Training"
+  - url: /references/
+    fr: "Références"
+    en: "References"
+  - url: /a-propos/
+    fr: "À propos"
+    en: "About"
+  - url: /contact/
     fr: "Contact"
     en: "Contact"
 

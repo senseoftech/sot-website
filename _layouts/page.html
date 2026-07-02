@@ -1,0 +1,27 @@
+---
+layout: default
+---
+{%- assign b = page.banner -%}
+<main class="page">
+  {%- if b -%}
+  <section class="page-banner">
+    <div class="page-banner__bg"></div>
+    <div class="container">
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <a href="{{ '/' | relative_url }}"><span class="i18n-fr">Accueil</span><span class="i18n-en">Home</span></a>
+        <span class="sep">/</span>
+        <span class="current">{{ page.title | escape }}</span>
+      </nav>
+      {%- if b.eyebrow -%}
+      <span class="eyebrow"><span class="i18n-fr">{{ b.eyebrow.fr }}</span><span class="i18n-en">{{ b.eyebrow.en }}</span></span>
+      {%- endif -%}
+      <h1><span class="i18n-fr">{{ b.heading.fr }}</span><span class="i18n-en">{{ b.heading.en }}</span></h1>
+      {%- if b.lead -%}
+      <p class="page-banner__lead"><span class="i18n-fr">{{ b.lead.fr }}</span><span class="i18n-en">{{ b.lead.en }}</span></p>
+      {%- endif -%}
+    </div>
+  </section>
+  {%- endif -%}
+
+  {{ content }}
+</main>

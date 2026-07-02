@@ -1,0 +1,32 @@
+# Content for the /formations-conferences/ page
+topics:
+  - icon: cpu
+    title: { fr: "IA & ingénierie assistée", en: "AI & assisted engineering" }
+    desc: { fr: "Adopter les agents de code, copilotes et l'automatisation dans le quotidien des équipes.", en: "Adopting coding agents, copilots and automation in teams' daily work." }
+  - icon: code
+    title: { fr: "Développement moderne", en: "Modern development" }
+    desc: { fr: "Bonnes pratiques, qualité, tests et productivité pour des applications robustes.", en: "Best practices, quality, testing and productivity for robust applications." }
+  - icon: layers
+    title: { fr: "Modernisation & cloud", en: "Modernization & cloud" }
+    desc: { fr: "Sortir du legacy, migrer vers le cloud et découper les monolithes.", en: "Escaping legacy, migrating to the cloud and breaking down monoliths." }
+  - icon: compass
+    title: { fr: "Architecture & DevOps", en: "Architecture & DevOps" }
+    desc: { fr: "Concevoir des systèmes solides et automatiser la livraison en confiance.", en: "Designing solid systems and automating delivery with confidence." }
+  - icon: spark
+    title: { fr: "Technologies Microsoft", en: "Microsoft technologies" }
+    desc: { fr: "Écosystème .NET, Azure et outillage — par un Microsoft MVP.", en: "The .NET and Azure ecosystem and tooling — by a Microsoft MVP." }
+  - icon: graduation
+    title: { fr: "Culture d'ingénierie", en: "Engineering culture" }
+    desc: { fr: "Faire grandir les équipes : collaboration, revue, apprentissage continu.", en: "Growing teams: collaboration, review and continuous learning." }
+
+formats:
+  - icon: graduation
+    label: { fr: "Formations en entreprise", en: "In-house training" }
+  - icon: build
+    label: { fr: "Ateliers pratiques", en: "Hands-on workshops" }
+  - icon: share
+    label: { fr: "Conférences & keynotes", en: "Conferences & keynotes" }
+  - icon: pin
+    label: { fr: "Sur site ou à distance", en: "On-site or remote" }
+  - icon: pen
+    label: { fr: "Programmes sur-mesure", en: "Tailor-made programs" }

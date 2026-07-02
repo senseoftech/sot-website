@@ -1,11 +1,10 @@
 ---
 layout: default
-onepage: true
 title: Sense of Tech — Leap to your innovation
 description: >
   Sense of Tech accompagne les entreprises dans l'ingénierie assistée par IA,
-  la création et la modernisation d'applications. AI-assisted engineering,
-  custom development and application modernization.
+  la création et la modernisation d'applications, ainsi que les formations et
+  conférences. AI-assisted engineering, custom development and modernization.
 ---
 
 {%- assign c = site.data.content -%}
@@ -31,11 +30,11 @@ description: >
       </p>
 
       <div class="hero__actions">
-        <a class="btn btn-primary" href="#contact">
+        <a class="btn btn-primary" href="{{ '/contact/' | relative_url }}">
           <span class="i18n-fr">{{ c.hero.cta_primary.fr }}</span><span class="i18n-en">{{ c.hero.cta_primary.en }}</span>
           {% include icon.html name="arrow-right" %}
         </a>
-        <a class="btn btn-ghost" href="#expertise">
+        <a class="btn btn-ghost" href="{{ '/expertises/' | relative_url }}">
           <span class="i18n-fr">{{ c.hero.cta_secondary.fr }}</span><span class="i18n-en">{{ c.hero.cta_secondary.en }}</span>
         </a>
       </div>
@@ -54,7 +53,7 @@ description: >
   <div class="container about__grid">
     <div class="about__text reveal">
       <span class="eyebrow"><span class="i18n-fr">{{ c.about.eyebrow.fr }}</span><span class="i18n-en">{{ c.about.eyebrow.en }}</span></span>
-      <h2 class="section-head__title" style="font-size:clamp(1.8rem,3.6vw,2.7rem)">
+      <h2 style="font-size:clamp(1.8rem,3.6vw,2.7rem)">
         <span class="i18n-fr">{{ c.about.title.fr }}</span><span class="i18n-en">{{ c.about.title.en }}</span>
       </h2>
       <div class="about__body">
@@ -81,8 +80,8 @@ description: >
         {%- endfor -%}
       </ul>
       <div style="margin-top:28px">
-        <a class="btn btn-ghost" href="#team">
-          <span class="i18n-fr">Rencontrer l'équipe</span><span class="i18n-en">Meet the team</span>
+        <a class="btn btn-ghost" href="{{ '/a-propos/' | relative_url }}">
+          <span class="i18n-fr">En savoir plus sur nous</span><span class="i18n-en">More about us</span>
           {% include icon.html name="arrow-right" %}
         </a>
       </div>
@@ -100,13 +99,24 @@ description: >
     </div>
 
     <div class="cards">
-      {%- for s in c.expertise.services -%}
-      <article class="card reveal" data-delay="{{ forloop.index0 | modulo: 3 }}">
-        <div class="card__icon">{% include icon.html name=s.icon %}</div>
-        <h3><span class="i18n-fr">{{ s.title.fr }}</span><span class="i18n-en">{{ s.title.en }}</span></h3>
-        <p><span class="i18n-fr">{{ s.desc.fr }}</span><span class="i18n-en">{{ s.desc.en }}</span></p>
-      </article>
+      {%- for x in site.data.expertises -%}
+      <a class="card reveal" href="{{ '/expertises/' | append: x.slug | append: '/' | relative_url }}" data-delay="{{ forloop.index0 | modulo: 3 }}">
+        <div class="card__icon">{% include icon.html name=x.icon %}</div>
+        <h3><span class="i18n-fr">{{ x.title.fr }}</span><span class="i18n-en">{{ x.title.en }}</span></h3>
+        <p><span class="i18n-fr">{{ x.tagline.fr }}</span><span class="i18n-en">{{ x.tagline.en }}</span></p>
+        <span class="card__more">
+          <span class="i18n-fr">En savoir plus</span><span class="i18n-en">Learn more</span>
+          {% include icon.html name="arrow-right" %}
+        </span>
+      </a>
       {%- endfor -%}
+    </div>
+
+    <div style="text-align:center;margin-top:44px" class="reveal">
+      <a class="btn btn-ghost" href="{{ '/expertises/' | relative_url }}">
+        <span class="i18n-fr">Toutes nos expertises</span><span class="i18n-en">All our expertise</span>
+        {% include icon.html name="arrow-right" %}
+      </a>
     </div>
   </div>
 </section>
@@ -132,6 +142,42 @@ description: >
   </div>
 </section>
 
+<!-- ============================ FORMATIONS TEASER ============================ -->
+<section class="section">
+  <div class="container">
+    <div class="teaser reveal">
+      <div>
+        <span class="eyebrow"><span class="i18n-fr">Formations & conférences</span><span class="i18n-en">Training & conferences</span></span>
+        <h2><span class="i18n-fr">Nous formons vos équipes et partageons sur scène.</span><span class="i18n-en">We train your teams and speak on stage.</span></h2>
+        <p><span class="i18n-fr">Formations sur-mesure, ateliers pratiques et conférences autour de l'IA, du développement moderne et de la modernisation — animés par un Microsoft MVP.</span><span class="i18n-en">Tailor-made training, hands-on workshops and conference talks on AI, modern development and modernization — delivered by a Microsoft MVP.</span></p>
+        <a class="btn btn-primary" href="{{ '/formations-conferences/' | relative_url }}">
+          <span class="i18n-fr">Découvrir nos formations</span><span class="i18n-en">Explore our training</span>
+          {% include icon.html name="arrow-right" %}
+        </a>
+      </div>
+      <div class="teaser__media">{% include icon.html name="graduation" %}</div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ REFERENCES TEASER ============================ -->
+<section class="section">
+  <div class="container">
+    <div class="teaser reveal">
+      <div class="teaser__media">{% include icon.html name="spark" %}</div>
+      <div>
+        <span class="eyebrow"><span class="i18n-fr">Références</span><span class="i18n-en">References</span></span>
+        <h2><span class="i18n-fr">Ils nous ont fait confiance.</span><span class="i18n-en">They put their trust in us.</span></h2>
+        <p><span class="i18n-fr">Des entreprises, PME et indépendants nous confient la création, la modernisation et l'exploitation de leurs applications.</span><span class="i18n-en">Companies, SMEs and independents trust us to build, modernize and get the most out of their applications.</span></p>
+        <a class="btn btn-ghost" href="{{ '/references/' | relative_url }}">
+          <span class="i18n-fr">Voir nos références</span><span class="i18n-en">See our references</span>
+          {% include icon.html name="arrow-right" %}
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- ============================ TEAM ============================ -->
 <section class="section team" id="team">
   <div class="container">
@@ -143,7 +189,7 @@ description: >
     <div class="members">
       {%- for m in c.team.members -%}
       <article class="member reveal">
-        <img class="member__avatar" src="{{ m.avatar | relative_url }}" alt="{{ m.name }}">
+        <img class="member__avatar" src="{{ m.avatar | relative_url }}" alt="{{ m.name }}" loading="lazy">
         <div>
           <h3>{{ m.name }}</h3>
           <div class="member__role"><span class="i18n-fr">{{ m.role.fr }}</span><span class="i18n-en">{{ m.role.en }}</span></div>
@@ -160,69 +206,4 @@ description: >
   </div>
 </section>
 
-<!-- ============================ CTA BAND ============================ -->
-<section class="cta-band">
-  <div class="container">
-    <div class="cta-band__inner reveal">
-      <h2><span class="i18n-fr">{{ c.cta.title.fr }}</span><span class="i18n-en">{{ c.cta.title.en }}</span></h2>
-      <p><span class="i18n-fr">{{ c.cta.subtitle.fr }}</span><span class="i18n-en">{{ c.cta.subtitle.en }}</span></p>
-      <a class="btn btn-primary" href="#contact">
-        <span class="i18n-fr">{{ c.cta.button.fr }}</span><span class="i18n-en">{{ c.cta.button.en }}</span>
-        {% include icon.html name="arrow-right" %}
-      </a>
-    </div>
-  </div>
-</section>
-
-<!-- ============================ CONTACT ============================ -->
-<section class="section section--tight" id="contact">
-  <div class="container">
-    <div class="section-head reveal">
-      <span class="eyebrow"><span class="i18n-fr">{{ c.contact.eyebrow.fr }}</span><span class="i18n-en">{{ c.contact.eyebrow.en }}</span></span>
-      <h2><span class="i18n-fr">{{ c.contact.title.fr }}</span><span class="i18n-en">{{ c.contact.title.en }}</span></h2>
-      <p><span class="i18n-fr">{{ c.contact.intro.fr }}</span><span class="i18n-en">{{ c.contact.intro.en }}</span></p>
-    </div>
-
-    <div class="contact__grid">
-      <form class="form reveal" id="contact-form" data-mailto="{{ c.contact.details.email }}">
-        <div class="form__row">
-          <input type="text" name="name" required
-                 data-fr="{{ c.contact.form.name.fr }}" data-en="{{ c.contact.form.name.en }}"
-                 placeholder="{{ c.contact.form.name.fr }}">
-          <input type="email" name="email" required
-                 data-fr="{{ c.contact.form.email.fr }}" data-en="{{ c.contact.form.email.en }}"
-                 placeholder="{{ c.contact.form.email.fr }}">
-        </div>
-        <input type="text" name="subject"
-               data-fr="{{ c.contact.form.subject.fr }}" data-en="{{ c.contact.form.subject.en }}"
-               placeholder="{{ c.contact.form.subject.fr }}">
-        <textarea name="message" required
-                  data-fr="{{ c.contact.form.message.fr }}" data-en="{{ c.contact.form.message.en }}"
-                  placeholder="{{ c.contact.form.message.fr }}"></textarea>
-        <button type="submit" class="btn btn-primary">
-          {% include icon.html name="mail" %}
-          <span class="i18n-fr">{{ c.contact.form.submit.fr }}</span><span class="i18n-en">{{ c.contact.form.submit.en }}</span>
-        </button>
-      </form>
-
-      <aside class="contact__card reveal" data-delay="1">
-        <div class="contact__item">
-          <div class="label"><span class="i18n-fr">{{ c.contact.details.office.fr }}</span><span class="i18n-en">{{ c.contact.details.office.en }}</span></div>
-          <p>{{ c.contact.details.address }}</p>
-        </div>
-        <div class="contact__item">
-          <div class="label"><span class="i18n-fr">{{ c.contact.details.phone_label.fr }}</span><span class="i18n-en">{{ c.contact.details.phone_label.en }}</span></div>
-          <p><a href="tel:+32489361501">{{ c.contact.details.phone }}</a></p>
-        </div>
-        <div class="contact__item">
-          <div class="label">{{ c.contact.details.email_label }}</div>
-          <p><a href="mailto:{{ c.contact.details.email }}">{{ c.contact.details.email }}</a></p>
-        </div>
-        <div class="contact__item">
-          <div class="label">{{ c.contact.details.vat_label }}</div>
-          <p>{{ c.contact.details.vat }}</p>
-        </div>
-      </aside>
-    </div>
-  </div>
-</section>
+{% include cta-band.html %}

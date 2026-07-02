@@ -1,0 +1,71 @@
+---
+layout: page
+permalink: /a-propos/
+title: "À propos"
+description: "Sense of Tech aide les entreprises, PME et indépendants à tirer le meilleur de la technologie et de l'IA. Fondée par Adrien Clerbois, Microsoft MVP, basée en Belgique."
+banner:
+  eyebrow:
+    fr: "À propos"
+    en: "About"
+  heading:
+    fr: "La technologie a du sens quand elle sert vos ambitions."
+    en: "Technology matters when it serves your ambitions."
+  lead:
+    fr: "Sense of Tech est née de l'envie d'aider les entreprises à avancer plus vite, plus loin, grâce à une technologie maîtrisée."
+    en: "Sense of Tech was born from the desire to help companies move faster and further, through technology they master."
+---
+{%- assign c = site.data.content -%}
+
+<section class="section">
+  <div class="container split">
+    <div class="prose reveal">
+      <p class="i18n-fr">Nous avons créé Sense of Tech pour trouver des solutions numériques aux entreprises, PME et indépendants qui veulent accélérer leurs ambitions — sans complexité inutile.</p>
+      <p class="i18n-en">We created Sense of Tech to find digital solutions for companies, SMEs and independents who want to accelerate their ambitions — without needless complexity.</p>
+      <p class="i18n-fr">Aujourd'hui, l'intelligence artificielle change la façon de concevoir, moderniser et exploiter les logiciels. Nous en faisons un atout concret pour vos équipes, du cadrage jusqu'à la mise en production — et nous transmettons notre savoir pour que vous restiez autonomes.</p>
+      <p class="i18n-en">Today, artificial intelligence is reshaping how software is designed, modernized and operated. We turn it into a concrete asset for your teams, from framing to production — and we pass on our knowledge so you stay autonomous.</p>
+      <p class="i18n-fr">Sense of Tech, c'est aussi un contact simple entre une entreprise pleine d'ambition et l'envie de bâtir un monde meilleur. Nous investissons notre temps dans les communautés tech et dans des initiatives tournées vers demain.</p>
+      <p class="i18n-en">Sense of Tech is also an easy point of contact between an ambitious company and the will to build a better world. We invest our time in tech communities and in forward-looking initiatives.</p>
+    </div>
+    <aside class="aside-card reveal" data-delay="1">
+      <h3><span class="i18n-fr">Pourquoi nous</span><span class="i18n-en">Why us</span></h3>
+      <ul>
+        {%- for pt in c.about.points -%}
+        <li>{% include icon.html name="check" %}<span><span class="i18n-fr">{{ pt.fr }}</span><span class="i18n-en">{{ pt.en }}</span></span></li>
+        {%- endfor -%}
+      </ul>
+      <ul style="margin-top:20px">
+        {%- for t in c.trust -%}
+        <li>{% include icon.html name="spark" %}<span><span class="i18n-fr">{{ t.fr }}</span><span class="i18n-en">{{ t.en }}</span></span></li>
+        {%- endfor -%}
+      </ul>
+    </aside>
+  </div>
+</section>
+
+<section class="section team">
+  <div class="container">
+    <div class="section-head center reveal">
+      <span class="eyebrow"><span class="i18n-fr">{{ c.team.eyebrow.fr }}</span><span class="i18n-en">{{ c.team.eyebrow.en }}</span></span>
+      <h2><span class="i18n-fr">{{ c.team.title.fr }}</span><span class="i18n-en">{{ c.team.title.en }}</span></h2>
+    </div>
+    <div class="members">
+      {%- for m in c.team.members -%}
+      <article class="member reveal">
+        <img class="member__avatar" src="{{ m.avatar | relative_url }}" alt="{{ m.name }}" loading="lazy">
+        <div>
+          <h3>{{ m.name }}</h3>
+          <div class="member__role"><span class="i18n-fr">{{ m.role.fr }}</span><span class="i18n-en">{{ m.role.en }}</span></div>
+          <p><span class="i18n-fr">{{ m.bio.fr }}</span><span class="i18n-en">{{ m.bio.en }}</span></p>
+          <div class="member__socials">
+            {%- for s in m.socials -%}
+            <a href="{{ s.link }}" target="_blank" rel="noopener" aria-label="{{ s.icon }}">{% include icon.html name=s.icon %}</a>
+            {%- endfor -%}
+          </div>
+        </div>
+      </article>
+      {%- endfor -%}
+    </div>
+  </div>
+</section>
+
+{% include cta-band.html %}

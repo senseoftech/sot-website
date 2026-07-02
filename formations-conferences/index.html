@@ -1,0 +1,63 @@
+---
+layout: page
+permalink: /formations-conferences/
+title: "Formations & conférences"
+description: "Sense of Tech forme vos équipes et intervient en conférence : IA & ingénierie assistée, développement moderne, modernisation, cloud, architecture et technologies Microsoft — animé par un Microsoft MVP."
+banner:
+  eyebrow:
+    fr: "Formations & conférences"
+    en: "Training & conferences"
+  heading:
+    fr: "Nous formons vos équipes et partageons sur scène."
+    en: "We train your teams and speak on stage."
+  lead:
+    fr: "Formations sur-mesure, ateliers pratiques et conférences, animés par un Microsoft MVP passionné de transmission."
+    en: "Tailor-made training, hands-on workshops and conference talks, delivered by a Microsoft MVP who loves sharing knowledge."
+---
+{%- assign f = site.data.formations -%}
+
+<section class="section">
+  <div class="container">
+    <div class="split">
+      <div class="prose reveal">
+        <p class="i18n-fr">La meilleure technologie ne vaut que si les équipes savent l'exploiter. Sense of Tech conçoit des <strong>formations sur-mesure</strong> et anime des <strong>conférences</strong> pour diffuser les compétences autour de l'IA, du développement moderne et de la modernisation applicative.</p>
+        <p class="i18n-en">The best technology is only worth as much as the teams who can use it. Sense of Tech designs <strong>tailor-made training</strong> and delivers <strong>conference talks</strong> to spread skills around AI, modern development and application modernization.</p>
+        <p class="i18n-fr">Fondateur <strong>Microsoft MVP</strong>, Adrien Clerbois intervient régulièrement au sein des communautés tech, en Belgique et à l'international. Chaque intervention est adaptée à votre contexte, votre niveau et vos objectifs.</p>
+        <p class="i18n-en">As a <strong>Microsoft MVP</strong>, founder Adrien Clerbois regularly speaks within tech communities, in Belgium and internationally. Every session is adapted to your context, level and objectives.</p>
+      </div>
+      <aside class="aside-card reveal" data-delay="1">
+        <h3><span class="i18n-fr">Formats</span><span class="i18n-en">Formats</span></h3>
+        <ul>
+          {%- for fmt in f.formats -%}
+          <li>{% include icon.html name=fmt.icon %}<span><span class="i18n-fr">{{ fmt.label.fr }}</span><span class="i18n-en">{{ fmt.label.en }}</span></span></li>
+          {%- endfor -%}
+        </ul>
+        <div style="margin-top:24px">
+          <a class="btn btn-primary" href="{{ '/contact/' | relative_url }}">
+            <span class="i18n-fr">Demander une formation</span><span class="i18n-en">Request training</span>
+          </a>
+        </div>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<section class="section approach">
+  <div class="container">
+    <div class="section-head center reveal">
+      <span class="eyebrow"><span class="i18n-fr">Thématiques</span><span class="i18n-en">Topics</span></span>
+      <h2><span class="i18n-fr">Ce que nous transmettons</span><span class="i18n-en">What we teach</span></h2>
+    </div>
+    <div class="topic-grid">
+      {%- for t in f.topics -%}
+      <div class="topic reveal" data-delay="{{ forloop.index0 | modulo: 3 }}">
+        <div class="k">{% include icon.html name=t.icon %}</div>
+        <h3><span class="i18n-fr">{{ t.title.fr }}</span><span class="i18n-en">{{ t.title.en }}</span></h3>
+        <p><span class="i18n-fr">{{ t.desc.fr }}</span><span class="i18n-en">{{ t.desc.en }}</span></p>
+      </div>
+      {%- endfor -%}
+    </div>
+  </div>
+</section>
+
+{% include cta-band.html %}

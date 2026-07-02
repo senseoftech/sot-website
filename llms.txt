@@ -1,0 +1,29 @@
+---
+---
+{%- assign co = site.company -%}
+{%- assign c = site.data.content -%}
+# Sense of Tech
+
+> Sense of Tech is a Belgium-based technology company founded by Adrien Clerbois (Microsoft MVP). It helps companies, SMEs and independents with AI-assisted engineering, custom application development, application modernization, software consulting & architecture, coaching & training, and conferences. The site is bilingual (French / English).
+
+Key facts:
+- Founder: {{ co.founder }} (Microsoft MVP)
+- Location: {{ co.street }}, {{ co.postal_code }} {{ co.city }}, {{ co.country }}
+- Email: {{ co.email }} — Phone: {{ co.phone_display }} — VAT: {{ co.vat }}
+- Website: {{ site.url }}/
+- Languages: French, English
+
+## Expertise
+{% for x in site.data.expertises -%}
+- [{{ x.title.fr }} / {{ x.title.en }}]({{ '/expertises/' | append: x.slug | append: '/' | absolute_url }}): {{ x.tagline.fr }}
+{% endfor %}
+## Company
+- [Expertises / Expertise]({{ '/expertises/' | absolute_url }}): overview of all services
+- [Formations & conférences / Training & conferences]({{ '/formations-conferences/' | absolute_url }}): tailored training, workshops and conference talks by a Microsoft MVP
+- [Références / References]({{ '/references/' | absolute_url }}): organizations that trust Sense of Tech
+- [À propos / About]({{ '/a-propos/' | absolute_url }}): company story and founder
+- [Contact]({{ '/contact/' | absolute_url }}): get in touch — the first conversation is free
+
+## Optional
+- [Sitemap]({{ '/sitemap.xml' | absolute_url }})
+- [Machine profile for agents]({{ '/agents.txt' | absolute_url }})

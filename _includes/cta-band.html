@@ -1,0 +1,13 @@
+{%- assign c = site.data.content -%}
+<section class="cta-band">
+  <div class="container">
+    <div class="cta-band__inner reveal">
+      <h2><span class="i18n-fr">{{ c.cta.title.fr }}</span><span class="i18n-en">{{ c.cta.title.en }}</span></h2>
+      <p><span class="i18n-fr">{{ c.cta.subtitle.fr }}</span><span class="i18n-en">{{ c.cta.subtitle.en }}</span></p>
+      <a class="btn btn-primary" href="{{ '/contact/' | relative_url }}">
+        <span class="i18n-fr">{{ c.cta.button.fr }}</span><span class="i18n-en">{{ c.cta.button.en }}</span>
+        {% include icon.html name="arrow-right" %}
+      </a>
+    </div>
+  </div>
+</section>

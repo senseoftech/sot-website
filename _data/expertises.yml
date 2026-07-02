@@ -1,0 +1,214 @@
+# ---------------------------------------------------------------------------
+# Detailed, bilingual content for each expertise (used by the /expertises/
+# hub and the individual detail pages). Order here = order on the hub.
+# ---------------------------------------------------------------------------
+
+- slug: ingenierie-assistee-par-ia
+  icon: cpu
+  meta_title_fr: "Ingénierie assistée par IA"
+  meta_desc_fr: "Nous intégrons l'IA (agents de code, copilotes, automatisation) dans votre cycle de développement pour livrer plus vite et mieux. Accompagnement d'équipes en Belgique et à distance."
+  title:
+    fr: "Ingénierie assistée par IA"
+    en: "AI-assisted engineering"
+  tagline:
+    fr: "Faites de l'IA un accélérateur concret pour vos équipes de développement."
+    en: "Turn AI into a concrete accelerator for your engineering teams."
+  intro:
+    - fr: "L'intelligence artificielle transforme la façon d'écrire, de tester et de maintenir du logiciel. Bien intégrée, elle démultiplie la productivité de vos équipes ; mal cadrée, elle ajoute du bruit et du risque."
+      en: "Artificial intelligence is transforming how software is written, tested and maintained. Integrated well, it multiplies your teams' productivity; framed poorly, it adds noise and risk."
+    - fr: "Sense of Tech vous aide à adopter les agents de code, copilotes et flux automatisés au bon endroit de votre cycle de développement — avec méthode, garde-fous et transfert de compétences."
+      en: "Sense of Tech helps you adopt coding agents, copilots and automated workflows at the right place in your development lifecycle — with method, guardrails and knowledge transfer."
+  benefits:
+    - t: { fr: "Livraison plus rapide", en: "Faster delivery" }
+      d: { fr: "Automatisez les tâches répétitives (tests, revue, documentation) pour concentrer vos développeurs sur la valeur.", en: "Automate repetitive work (tests, review, documentation) so developers focus on value." }
+    - t: { fr: "Qualité maîtrisée", en: "Controlled quality" }
+      d: { fr: "Des garde-fous, des revues et des tests assistés par IA pour livrer avec confiance.", en: "Guardrails, reviews and AI-assisted testing to ship with confidence." }
+    - t: { fr: "Équipes augmentées", en: "Augmented teams" }
+      d: { fr: "Vos développeurs montent en compétences sur les outils IA et gardent la maîtrise.", en: "Your developers upskill on AI tooling and stay in control." }
+  deliverables:
+    - { fr: "Audit de votre chaîne de développement et cas d'usage IA prioritaires", en: "Audit of your delivery pipeline and priority AI use cases" }
+    - { fr: "Mise en place d'agents / copilotes et de flux automatisés", en: "Set-up of agents / copilots and automated workflows" }
+    - { fr: "Garde-fous, bonnes pratiques et sécurité", en: "Guardrails, best practices and security" }
+    - { fr: "Formation et accompagnement de vos équipes", en: "Training and coaching for your teams" }
+  process:
+    - t: { fr: "Cadrer", en: "Frame" }
+      d: { fr: "Identifier où l'IA apporte réellement de la valeur dans votre contexte.", en: "Identify where AI genuinely adds value in your context." }
+    - t: { fr: "Outiller", en: "Equip" }
+      d: { fr: "Intégrer les bons outils avec des garde-fous adaptés.", en: "Integrate the right tools with suitable guardrails." }
+    - t: { fr: "Transmettre", en: "Empower" }
+      d: { fr: "Former vos équipes pour qu'elles restent autonomes.", en: "Train your teams so they stay autonomous." }
+
+- slug: modernisation-applications
+  icon: layers
+  meta_title_fr: "Modernisation d'applications"
+  meta_desc_fr: "Refonte d'architecture, migration cloud et découpage du legacy sans interrompre votre activité. Redonnez de la valeur à vos applications historiques."
+  title:
+    fr: "Modernisation d'applications"
+    en: "Application modernization"
+  tagline:
+    fr: "Transformez vos applications historiques en atouts, sans interrompre votre activité."
+    en: "Turn your legacy applications into assets, without disrupting your business."
+  intro:
+    - fr: "Une application vieillissante coûte cher : lenteurs, dette technique, difficultés à recruter, sécurité fragile. Mais tout réécrire d'un coup est risqué et rarement nécessaire."
+      en: "An aging application is costly: slowness, technical debt, hiring difficulties, fragile security. Yet rewriting everything at once is risky and rarely necessary."
+    - fr: "Nous modernisons progressivement : refonte d'architecture, migration vers le cloud, découpage du monolithe et remise à niveau — par étapes maîtrisées, avec un logiciel qui reste en production."
+      en: "We modernize progressively: architecture overhaul, cloud migration, decomposition of the monolith and upgrades — in controlled steps, keeping the software in production."
+  benefits:
+    - t: { fr: "Moins de dette, plus de vitesse", en: "Less debt, more speed" }
+      d: { fr: "Une base saine sur laquelle vos équipes livrent à nouveau rapidement.", en: "A healthy base your teams can ship on quickly again." }
+    - t: { fr: "Migration cloud maîtrisée", en: "Controlled cloud migration" }
+      d: { fr: "Réduisez les coûts et gagnez en scalabilité et en résilience.", en: "Cut costs and gain scalability and resilience." }
+    - t: { fr: "Zéro rupture", en: "No disruption" }
+      d: { fr: "Une trajectoire par étapes, sans big bang ni interruption de service.", en: "A step-by-step path, without a big bang or downtime." }
+  deliverables:
+    - { fr: "Audit technique et cartographie de l'existant", en: "Technical audit and mapping of the current system" }
+    - { fr: "Feuille de route de modernisation priorisée", en: "Prioritized modernization roadmap" }
+    - { fr: "Refonte d'architecture et/ou migration cloud", en: "Architecture overhaul and/or cloud migration" }
+    - { fr: "Découpage progressif et montée en qualité", en: "Progressive decomposition and quality improvements" }
+  process:
+    - t: { fr: "Diagnostiquer", en: "Diagnose" }
+      d: { fr: "Comprendre l'existant, les risques et les priorités métier.", en: "Understand the current state, risks and business priorities." }
+    - t: { fr: "Planifier", en: "Plan" }
+      d: { fr: "Définir une trajectoire par étapes, orientée valeur.", en: "Define a value-driven, step-by-step trajectory." }
+    - t: { fr: "Moderniser", en: "Modernize" }
+      d: { fr: "Livrer par itérations, en gardant le service en production.", en: "Deliver in iterations, keeping the service in production." }
+
+- slug: creation-applications
+  icon: code
+  meta_title_fr: "Création d'applications sur-mesure"
+  meta_desc_fr: "Conception et développement d'applications web, mobiles et métier sur-mesure, robustes et évolutives. De l'idée au produit en production."
+  title:
+    fr: "Création d'applications"
+    en: "Custom application development"
+  tagline:
+    fr: "De l'idée au produit en production : des applications sur-mesure, robustes et évolutives."
+    en: "From idea to a product in production: tailor-made applications, robust and scalable."
+  intro:
+    - fr: "Vous avez une idée, un besoin ou un problème à résoudre. Nous le transformons en une application concrète, pensée pour vos utilisateurs et pour durer."
+      en: "You have an idea, a need or a problem to solve. We turn it into a concrete application, designed for your users and built to last."
+    - fr: "Web, mobile ou logiciel métier : nous couvrons la conception, le développement et la mise en production, avec une architecture solide et l'IA comme accélérateur."
+      en: "Web, mobile or business software: we cover design, development and go-live, with a solid architecture and AI as an accelerator."
+  benefits:
+    - t: { fr: "Sur-mesure, pas de compromis", en: "Tailor-made, no compromise" }
+      d: { fr: "Une solution qui épouse vos processus, pas l'inverse.", en: "A solution that fits your processes, not the other way around." }
+    - t: { fr: "Conçu pour évoluer", en: "Built to evolve" }
+      d: { fr: "Une architecture claire qui grandit avec votre activité.", en: "A clean architecture that grows with your business." }
+    - t: { fr: "Time-to-market", en: "Time-to-market" }
+      d: { fr: "Des itérations courtes, accélérées par l'IA, pour livrer vite.", en: "Short, AI-accelerated iterations to ship fast." }
+  deliverables:
+    - { fr: "Cadrage produit et conception (UX / architecture)", en: "Product framing and design (UX / architecture)" }
+    - { fr: "Développement web, mobile ou métier", en: "Web, mobile or business development" }
+    - { fr: "Mise en production et intégration continue", en: "Go-live and continuous integration" }
+    - { fr: "Maintenance évolutive et support", en: "Evolutionary maintenance and support" }
+  process:
+    - t: { fr: "Concevoir", en: "Design" }
+      d: { fr: "Clarifier le besoin et définir la bonne solution.", en: "Clarify the need and define the right solution." }
+    - t: { fr: "Développer", en: "Build" }
+      d: { fr: "Construire par itérations, testées et démontrables.", en: "Build in tested, demonstrable iterations." }
+    - t: { fr: "Livrer", en: "Ship" }
+      d: { fr: "Mettre en production et faire évoluer dans la durée.", en: "Go to production and evolve over time." }
+
+- slug: plein-potentiel
+  icon: rocket
+  meta_title_fr: "Révéler le plein potentiel de votre entreprise"
+  meta_desc_fr: "Accompagnement stratégique pour exploiter tout le potentiel de votre technologie et de l'IA : cadrage, feuille de route, montée en compétences et gains mesurables."
+  title:
+    fr: "Révéler votre plein potentiel"
+    en: "Unlock your full potential"
+  tagline:
+    fr: "Exploitez tout le potentiel de votre technologie et de l'IA, avec des résultats mesurables."
+    en: "Harness the full potential of your technology and AI, with measurable results."
+  intro:
+    - fr: "La technologie n'a de valeur que si elle sert vos objectifs. Beaucoup d'entreprises disposent déjà d'atouts qu'elles n'exploitent pas — données, outils, savoir-faire, ou opportunités offertes par l'IA."
+      en: "Technology only matters if it serves your goals. Many companies already hold assets they don't leverage — data, tools, know-how, or the opportunities AI now offers."
+    - fr: "Nous vous accompagnons pour cadrer une stratégie, prioriser les bons chantiers et faire monter vos équipes en compétences — pour des gains concrets et mesurables."
+      en: "We help you frame a strategy, prioritize the right initiatives and upskill your teams — for concrete, measurable gains."
+  benefits:
+    - t: { fr: "Vision claire", en: "Clear vision" }
+      d: { fr: "Une feuille de route technologique alignée sur votre stratégie.", en: "A technology roadmap aligned with your strategy." }
+    - t: { fr: "Priorités par la valeur", en: "Value-driven priorities" }
+      d: { fr: "On investit là où l'impact est le plus fort, d'abord.", en: "We invest where the impact is strongest, first." }
+    - t: { fr: "Autonomie durable", en: "Lasting autonomy" }
+      d: { fr: "Vos équipes gagnent en compétences et en confiance.", en: "Your teams grow in skills and confidence." }
+  deliverables:
+    - { fr: "Diagnostic de maturité technologique et IA", en: "Technology & AI maturity assessment" }
+    - { fr: "Feuille de route priorisée et chiffrée", en: "Prioritized, costed roadmap" }
+    - { fr: "Accompagnement et montée en compétences", en: "Coaching and upskilling" }
+    - { fr: "Indicateurs de suivi et mesure des résultats", en: "Tracking indicators and results measurement" }
+  process:
+    - t: { fr: "Diagnostiquer", en: "Assess" }
+      d: { fr: "Évaluer vos atouts, vos écarts et vos opportunités.", en: "Assess your assets, gaps and opportunities." }
+    - t: { fr: "Prioriser", en: "Prioritize" }
+      d: { fr: "Choisir les chantiers à plus fort impact.", en: "Choose the highest-impact initiatives." }
+    - t: { fr: "Accompagner", en: "Support" }
+      d: { fr: "Exécuter, mesurer et ajuster à vos côtés.", en: "Execute, measure and adjust alongside you." }
+
+- slug: conseil-architecture
+  icon: compass
+  meta_title_fr: "Conseil & architecture logicielle"
+  meta_desc_fr: "Un regard expert sur vos choix techniques : architecture logicielle, cloud, DevOps et bonnes pratiques pour bâtir sur des fondations solides."
+  title:
+    fr: "Conseil & architecture"
+    en: "Consulting & architecture"
+  tagline:
+    fr: "Des choix techniques éclairés pour bâtir sur des fondations solides."
+    en: "Informed technical choices to build on solid foundations."
+  intro:
+    - fr: "Les bonnes décisions d'architecture prises tôt évitent des années de dette et de coûts. À l'inverse, un mauvais choix structurant se paie longtemps."
+      en: "The right architecture decisions made early avoid years of debt and cost. Conversely, a poor structural choice is paid for over a long time."
+    - fr: "Nous apportons un regard expert et indépendant sur vos choix : architecture logicielle, cloud, DevOps, sécurité et bonnes pratiques — pour décider en confiance."
+      en: "We bring an expert, independent perspective on your choices: software architecture, cloud, DevOps, security and best practices — so you can decide with confidence."
+  benefits:
+    - t: { fr: "Décisions éclairées", en: "Informed decisions" }
+      d: { fr: "Des recommandations concrètes, argumentées et adaptées à votre contexte.", en: "Concrete, reasoned recommendations tailored to your context." }
+    - t: { fr: "Moins de risques", en: "Reduced risk" }
+      d: { fr: "On anticipe les impasses techniques et les coûts cachés.", en: "We anticipate technical dead-ends and hidden costs." }
+    - t: { fr: "Fondations durables", en: "Durable foundations" }
+      d: { fr: "Une base saine, sécurisée et maintenable dans le temps.", en: "A healthy, secure and maintainable base over time." }
+  deliverables:
+    - { fr: "Revue d'architecture et recommandations", en: "Architecture review and recommendations" }
+    - { fr: "Choix technologiques et cloud", en: "Technology and cloud choices" }
+    - { fr: "Mise en place DevOps et bonnes pratiques", en: "DevOps set-up and best practices" }
+    - { fr: "Revue de sécurité et de performance", en: "Security and performance review" }
+  process:
+    - t: { fr: "Comprendre", en: "Understand" }
+      d: { fr: "Cerner vos contraintes, votre existant et vos objectifs.", en: "Grasp your constraints, current state and objectives." }
+    - t: { fr: "Recommander", en: "Recommend" }
+      d: { fr: "Proposer des options claires avec leurs compromis.", en: "Propose clear options with their trade-offs." }
+    - t: { fr: "Cadrer", en: "Frame" }
+      d: { fr: "Poser les fondations et les bonnes pratiques.", en: "Lay down the foundations and best practices." }
+
+- slug: coaching-formation
+  icon: graduation
+  meta_title_fr: "Coaching & formation d'équipes techniques"
+  meta_desc_fr: "Coaching technique, formations sur-mesure et transfert de savoir pour des développeurs plus compétents, plus autonomes et plus épanouis."
+  title:
+    fr: "Coaching & formation"
+    en: "Coaching & training"
+  tagline:
+    fr: "Faites grandir vos équipes : plus compétentes, plus autonomes, plus épanouies."
+    en: "Grow your teams: more skilled, more autonomous, more fulfilled."
+  intro:
+    - fr: "La meilleure façon de faire évoluer une équipe, c'est de développer ses compétences. Des développeurs plus compétents sont aussi des développeurs plus épanouis — et plus fidèles."
+      en: "The best way to grow a team is to develop its skills. More skilled developers are also more fulfilled — and more loyal — developers."
+    - fr: "Nous proposons coaching technique, formations sur-mesure et transfert de savoir, sur le terrain comme en salle, adaptés à votre stack et à vos enjeux."
+      en: "We offer technical coaching, tailored training and knowledge transfer, on the job or in the classroom, adapted to your stack and challenges."
+  benefits:
+    - t: { fr: "Compétences durables", en: "Lasting skills" }
+      d: { fr: "Un transfert de savoir réel, pas une dépendance à un prestataire.", en: "Real knowledge transfer, not dependency on a vendor." }
+    - t: { fr: "Sur-mesure", en: "Tailored" }
+      d: { fr: "Des contenus adaptés à votre stack et à votre niveau.", en: "Content adapted to your stack and level." }
+    - t: { fr: "Équipes engagées", en: "Engaged teams" }
+      d: { fr: "Des développeurs qui progressent et restent motivés.", en: "Developers who progress and stay motivated." }
+  deliverables:
+    - { fr: "Plan de formation adapté à vos besoins", en: "Training plan tailored to your needs" }
+    - { fr: "Coaching technique sur le terrain", en: "On-the-job technical coaching" }
+    - { fr: "Ateliers et formations en salle ou à distance", en: "Workshops and training, on-site or remote" }
+    - { fr: "Bonnes pratiques et culture d'ingénierie", en: "Best practices and engineering culture" }
+  process:
+    - t: { fr: "Évaluer", en: "Assess" }
+      d: { fr: "Identifier les compétences à développer.", en: "Identify the skills to develop." }
+    - t: { fr: "Former", en: "Train" }
+      d: { fr: "Coaching et ateliers concrets, sur vos projets.", en: "Concrete coaching and workshops, on your projects." }
+    - t: { fr: "Ancrer", en: "Embed" }
+      d: { fr: "Installer les bonnes pratiques dans la durée.", en: "Embed best practices for the long term." }

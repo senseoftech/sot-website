@@ -1,0 +1,35 @@
+---
+layout: page
+permalink: /expertises/
+title: "Expertises"
+description: "Ingénierie assistée par IA, création et modernisation d'applications, conseil & architecture, coaching & formation. Découvrez comment Sense of Tech fait passer un cap à votre entreprise."
+banner:
+  eyebrow:
+    fr: "Nos expertises"
+    en: "Our expertise"
+  heading:
+    fr: "De l'idée à la valeur, propulsés par l'IA."
+    en: "From idea to value, powered by AI."
+  lead:
+    fr: "Six façons concrètes de concevoir, moderniser et exploiter vos applications — et de faire monter vos équipes en compétences."
+    en: "Six concrete ways to build, modernize and get the most out of your applications — and to upskill your teams."
+---
+<section class="section">
+  <div class="container">
+    <div class="cards">
+      {%- for x in site.data.expertises -%}
+      <a class="card reveal" href="{{ '/expertises/' | append: x.slug | append: '/' | relative_url }}" data-delay="{{ forloop.index0 | modulo: 3 }}">
+        <div class="card__icon">{% include icon.html name=x.icon %}</div>
+        <h3><span class="i18n-fr">{{ x.title.fr }}</span><span class="i18n-en">{{ x.title.en }}</span></h3>
+        <p><span class="i18n-fr">{{ x.tagline.fr }}</span><span class="i18n-en">{{ x.tagline.en }}</span></p>
+        <span class="card__more">
+          <span class="i18n-fr">En savoir plus</span><span class="i18n-en">Learn more</span>
+          {% include icon.html name="arrow-right" %}
+        </span>
+      </a>
+      {%- endfor -%}
+    </div>
+  </div>
+</section>
+
+{% include cta-band.html %}

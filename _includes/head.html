@@ -3,8 +3,16 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>{% if page.title %}{{ page.title | escape }}{% else %}{{ site.title | escape }} — {{ site.description | strip_html | strip_newlines | truncate: 80 }}{% endif %}</title>
-  <meta name="description" content="{{ page.excerpt | default: site.description | strip_html | normalize_whitespace | truncate: 160 | escape }}">
+  {%- assign page_title = page.title | default: site.title -%}
+  {%- capture full_title -%}{{ page_title }}{% unless page.title == nil %} — {{ site.title }}{% endunless %}{%- endcapture -%}
+  {%- assign page_desc = page.description | default: page.excerpt | default: site.description | strip_html | normalize_whitespace | truncate: 165 -%}
+  {%- assign canonical_url = page.url | replace:'index.html','' | absolute_url -%}
+  {%- assign og_image = page.image | default: '/assets/images/logo-3.png' | absolute_url -%}
+
+  <title>{{ full_title | escape }}</title>
+  <meta name="description" content="{{ page_desc | escape }}">
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+  <meta name="author" content="{{ site.company.founder | escape }} — {{ site.title | escape }}">
 
   <!-- Set the language before first paint to avoid a flash of the wrong language -->
   <script>
@@ -23,14 +31,20 @@
   </script>
 
   <!-- Open Graph / social -->
-  <meta property="og:type" content="website">
+  <meta property="og:type" content="{{ page.og_type | default: 'website' }}">
   <meta property="og:site_name" content="{{ site.title | escape }}">
-  <meta property="og:title" content="{% if page.title %}{{ page.title | escape }}{% else %}{{ site.title | escape }}{% endif %}">
-  <meta property="og:description" content="{{ page.excerpt | default: site.description | strip_html | normalize_whitespace | truncate: 160 | escape }}">
-  <meta property="og:url" content="{{ page.url | replace:'index.html','' | absolute_url }}">
-  <meta property="og:image" content="{{ '/assets/images/logo-3.png' | absolute_url }}">
-  <meta name="twitter:card" content="summary">
+  <meta property="og:title" content="{{ full_title | escape }}">
+  <meta property="og:description" content="{{ page_desc | escape }}">
+  <meta property="og:url" content="{{ canonical_url }}">
+  <meta property="og:image" content="{{ og_image }}">
+  <meta property="og:image:alt" content="{{ site.title | escape }}">
+  <meta property="og:locale" content="{{ site.locale | default: 'fr_BE' }}">
+  <meta property="og:locale:alternate" content="en_US">
+  <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:site" content="@{{ site.twitter_username }}">
+  <meta name="twitter:title" content="{{ full_title | escape }}">
+  <meta name="twitter:description" content="{{ page_desc | escape }}">
+  <meta name="twitter:image" content="{{ og_image }}">
 
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -40,7 +54,7 @@
   <!-- Styles -->
   <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
 
-  <link rel="canonical" href="{{ page.url | replace:'index.html','' | absolute_url }}">
+  <link rel="canonical" href="{{ canonical_url }}">
   <link rel="alternate" type="application/rss+xml" title="{{ site.title | escape }}" href="{{ '/feed.xml' | relative_url }}">
 
   <link rel="apple-touch-icon" sizes="57x57" href="/assets/favicon/apple-icon-57x57.png">
@@ -59,6 +73,9 @@
   <link rel="manifest" href="/assets/favicon/manifest.json">
   <meta name="msapplication-TileColor" content="#0b0b0f">
   <meta name="theme-color" content="#0b0b0f">
+
+  <!-- Structured data (JSON-LD) for search engines and AI answer engines -->
+  {% include structured-data.html %}
 
   {% if jekyll.environment == 'production' and site.google_analytics %}
   {% include google-analytics.html %}

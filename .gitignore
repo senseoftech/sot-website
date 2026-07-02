@@ -8,4 +8,5 @@ vendor/
 
 # Local preview scaffolding (not part of the Jekyll build)
 _preview.html
+_preview/
 .claude/launch.json

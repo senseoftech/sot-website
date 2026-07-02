@@ -1,25 +1,46 @@
 {%- assign c = site.data.content -%}
+{%- assign co = site.company -%}
 <footer class="site-footer">
   <div class="container">
-    <div class="footer__top">
+    <div class="footer__grid">
       <div class="footer__brand">
         <img src="{{ '/assets/images/logo-3.png' | relative_url }}" alt="{{ c.brand.name }}">
         <p>
           <span class="i18n-fr">{{ c.footer.tagline.fr }}</span><span class="i18n-en">{{ c.footer.tagline.en }}</span>
         </p>
+        <div class="footer__socials">
+          {%- for s in c.socials -%}
+          <a href="{{ s.link }}" target="_blank" rel="noopener" aria-label="{{ s.label }}">
+            {% include icon.html name=s.icon %}
+          </a>
+          {%- endfor -%}
+        </div>
       </div>
-      <div class="footer__socials">
-        {%- for s in c.socials -%}
-        <a href="{{ s.link }}" target="_blank" rel="noopener" aria-label="{{ s.label }}">
-          {% include icon.html name=s.icon %}
-        </a>
-        {%- endfor -%}
+
+      <nav class="footer__col" aria-label="Footer">
+        <h4><span class="i18n-fr">Navigation</span><span class="i18n-en">Navigation</span></h4>
+        <ul>
+          {%- for item in c.nav -%}
+          <li><a href="{{ item.url | relative_url }}"><span class="i18n-fr">{{ item.fr }}</span><span class="i18n-en">{{ item.en }}</span></a></li>
+          {%- endfor -%}
+        </ul>
+      </nav>
+
+      <div class="footer__col">
+        <h4><span class="i18n-fr">Contact</span><span class="i18n-en">Contact</span></h4>
+        <ul>
+          <li>{{ co.street }}</li>
+          <li>{{ co.postal_code }} {{ co.city }}, {{ co.country }}</li>
+          <li><a href="tel:{{ co.phone }}">{{ co.phone_display }}</a></li>
+          <li><a href="mailto:{{ co.email }}">{{ co.email }}</a></li>
+          <li>{{ c.contact.details.vat_label }} {{ co.vat }}</li>
+        </ul>
       </div>
     </div>
 
     <div class="footer__bottom">
       <span>© <span id="footer-year">{{ site.time | date: "%Y" }}</span> {{ c.brand.name }}. <span class="i18n-fr">{{ c.footer.rights.fr }}</span><span class="i18n-en">{{ c.footer.rights.en }}</span></span>
-      <span>{{ c.contact.details.vat_label }} {{ c.contact.details.vat }} · <a href="mailto:{{ c.contact.details.email }}">{{ c.contact.details.email }}</a></span>
+      <span><a href="{{ '/llms.txt' | relative_url }}">llms.txt</a> · <a href="{{ '/sitemap.xml' | relative_url }}">sitemap</a></span>
     </div>
   </div>
 </footer>

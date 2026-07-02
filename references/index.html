@@ -1,0 +1,74 @@
+---
+layout: page
+permalink: /references/
+title: "Références — Ils nous ont fait confiance"
+description: "Les entreprises, PME et indépendants qui font confiance à Sense of Tech pour la création, la modernisation et l'exploitation de leurs applications."
+banner:
+  eyebrow:
+    fr: "Références"
+    en: "References"
+  heading:
+    fr: "Ils nous ont fait confiance."
+    en: "They put their trust in us."
+  lead:
+    fr: "Des projets concrets, au service d'entreprises et d'équipes qui veulent aller plus loin."
+    en: "Concrete projects, serving companies and teams that want to go further."
+---
+{%- assign r = site.data.references -%}
+
+<section class="section">
+  <div class="container">
+    <div class="section-head center reveal">
+      <p style="color:var(--text-muted);font-size:1.08rem;max-width:640px;margin-inline:auto">
+        <span class="i18n-fr">{{ r.intro.fr }}</span><span class="i18n-en">{{ r.intro.en }}</span>
+      </p>
+    </div>
+
+    {%- if r.clients and r.clients.size > 0 -%}
+    <div class="logo-grid reveal">
+      {%- for client in r.clients -%}
+      <div class="logo-cell">
+        {%- if client.url -%}<a href="{{ client.url }}" target="_blank" rel="noopener" title="{{ client.name }}">{%- endif -%}
+        <img src="{{ client.logo | relative_url }}" alt="{{ client.name }}" loading="lazy">
+        {%- if client.url -%}</a>{%- endif -%}
+      </div>
+      {%- endfor -%}
+    </div>
+    {%- else -%}
+    <div class="placeholder-note reveal">
+      <p><strong><span class="i18n-fr">Références détaillées disponibles sur demande.</span><span class="i18n-en">Detailed references available on request.</span></strong></p>
+      <p style="margin-top:8px;font-size:0.96rem">
+        <span class="i18n-fr">Vous souhaitez des exemples de réalisations proches de votre besoin ? Contactez-nous, nous vous mettrons en relation avec des références pertinentes.</span>
+        <span class="i18n-en">Would you like examples close to your needs? Get in touch and we'll point you to relevant references.</span>
+      </p>
+      <div style="margin-top:20px">
+        <a class="btn btn-ghost" href="{{ '/contact/' | relative_url }}">
+          <span class="i18n-fr">Demander des références</span><span class="i18n-en">Request references</span>
+          {% include icon.html name="arrow-right" %}
+        </a>
+      </div>
+    </div>
+    {%- endif -%}
+  </div>
+</section>
+
+{%- if r.testimonials and r.testimonials.size > 0 -%}
+<section class="section approach">
+  <div class="container">
+    <div class="section-head center reveal">
+      <span class="eyebrow"><span class="i18n-fr">Témoignages</span><span class="i18n-en">Testimonials</span></span>
+      <h2><span class="i18n-fr">Ce qu'ils en disent</span><span class="i18n-en">What they say</span></h2>
+    </div>
+    <div class="testimonials-grid">
+      {%- for t in r.testimonials -%}
+      <figure class="testimonial reveal">
+        <blockquote><p>“<span class="i18n-fr">{{ t.quote.fr }}</span><span class="i18n-en">{{ t.quote.en }}</span>”</p></blockquote>
+        <figcaption class="who"><strong>{{ t.author }}</strong> — <span class="i18n-fr">{{ t.role.fr }}</span><span class="i18n-en">{{ t.role.en }}</span></figcaption>
+      </figure>
+      {%- endfor -%}
+    </div>
+  </div>
+</section>
+{%- endif -%}
+
+{% include cta-band.html %}

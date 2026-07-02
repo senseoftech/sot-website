@@ -1,0 +1,22 @@
+# Content for the /references/ page.
+#
+# >>> À COMPLÉTER : ajoute ici tes vrais clients (logo + nom).
+#     Dépose les images des logos dans /assets/images/clients/ (PNG ou SVG, fond transparent).
+#     Tant que `clients` est vide, la page affiche un état d'attente propre (aucun faux logo).
+#
+intro:
+  fr: "Nous accompagnons des entreprises, des PME et des indépendants dans la création, la modernisation et l'exploitation de leurs applications. Voici quelques organisations qui nous ont fait confiance."
+  en: "We support companies, SMEs and independents in building, modernizing and getting the most out of their applications. Here are some of the organizations that have trusted us."
+
+# Exemple de format attendu :
+#   - name: "Nom du client"
+#     logo: /assets/images/clients/nom-client.png
+#     url: "https://exemple.com"        # optionnel
+clients: []
+
+# Témoignages (optionnel) — s'affichent seulement s'ils sont renseignés.
+# Exemple :
+#   - quote: { fr: "…", en: "…" }
+#     author: "Prénom Nom"
+#     role: { fr: "Poste, Société", en: "Role, Company" }
+testimonials: []

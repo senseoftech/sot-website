@@ -1,0 +1,47 @@
+{%- assign c = site.data.content -%}
+{%- assign co = site.company -%}
+<section class="section">
+  <div class="container">
+    <div class="contact__grid">
+      <form class="form reveal" id="contact-form" data-mailto="{{ co.email }}">
+        <div class="form__row">
+          <input type="text" name="name" required
+                 data-fr="{{ c.contact.form.name.fr }}" data-en="{{ c.contact.form.name.en }}"
+                 placeholder="{{ c.contact.form.name.fr }}">
+          <input type="email" name="email" required
+                 data-fr="{{ c.contact.form.email.fr }}" data-en="{{ c.contact.form.email.en }}"
+                 placeholder="{{ c.contact.form.email.fr }}">
+        </div>
+        <input type="text" name="subject"
+               data-fr="{{ c.contact.form.subject.fr }}" data-en="{{ c.contact.form.subject.en }}"
+               placeholder="{{ c.contact.form.subject.fr }}">
+        <textarea name="message" required
+                  data-fr="{{ c.contact.form.message.fr }}" data-en="{{ c.contact.form.message.en }}"
+                  placeholder="{{ c.contact.form.message.fr }}"></textarea>
+        <button type="submit" class="btn btn-primary">
+          {% include icon.html name="mail" %}
+          <span class="i18n-fr">{{ c.contact.form.submit.fr }}</span><span class="i18n-en">{{ c.contact.form.submit.en }}</span>
+        </button>
+      </form>
+
+      <aside class="contact__card reveal" data-delay="1">
+        <div class="contact__item">
+          <div class="label"><span class="i18n-fr">{{ c.contact.details.office.fr }}</span><span class="i18n-en">{{ c.contact.details.office.en }}</span></div>
+          <p>{{ co.street }}<br>{{ co.postal_code }} {{ co.city }}<br>{{ co.country }}</p>
+        </div>
+        <div class="contact__item">
+          <div class="label"><span class="i18n-fr">{{ c.contact.details.phone_label.fr }}</span><span class="i18n-en">{{ c.contact.details.phone_label.en }}</span></div>
+          <p><a href="tel:{{ co.phone }}">{{ co.phone_display }}</a></p>
+        </div>
+        <div class="contact__item">
+          <div class="label">{{ c.contact.details.email_label }}</div>
+          <p><a href="mailto:{{ co.email }}">{{ co.email }}</a></p>
+        </div>
+        <div class="contact__item">
+          <div class="label">{{ c.contact.details.vat_label }}</div>
+          <p>{{ co.vat }}</p>
+        </div>
+      </aside>
+    </div>
+  </div>
+</section>
